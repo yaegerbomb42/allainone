@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import Generator from './components/Generator'
 import StatsDashboard from './components/StatsDashboard'
+import SEOLandingPage from './components/SEOLandingPage' // New Component
 import { Analytics } from './utils/analytics'
 import { useEffect } from 'react'
 
 function App() {
   const [view, setView] = useState('landing')
   const [initialData, setInitialData] = useState(null)
+
+  // SEO State
+  const [seoParams, setSeoParams] = useState(null);
 
   useEffect(() => {
     Analytics.init();
@@ -18,14 +22,27 @@ function App() {
       setView('generator');
     }
 
-    // SEO: Dynamic Keyword Insertion (DKI)
-    // If user comes in via /?trade=Plumbing, we update the page to match instantly
-    const tradeParam = query.get('trade');
-    if (tradeParam) {
-      document.title = `Free ${tradeParam} Safety Topics 2025 | TurboToolbox`;
+    // SEO: Check for Magic City/State params
+    // Format: /?trade=HVAC&city=Austin&state=Texas
+    const qTrade = query.get('trade');
+    const qCity = query.get('city');
+    const qState = query.get('state');
+
+    if (qCity && qState && qTrade) {
+      // SEO LANDING PAGE MODE
+      setSeoParams({
+        trade: qTrade,
+        city: qCity,
+        state: qState
+      });
+      setView('seo_landing');
+      document.title = `Free ${qTrade} Safety Topics for ${qCity}, ${qState} | TurboToolbox`;
+    } else if (qTrade) {
+      // Simple DKI (Existing)
+      document.title = `Free ${qTrade} Safety Topics 2025 | TurboToolbox`;
       loadExample({
         companyName: 'Example Company',
-        trade: tradeParam,
+        trade: qTrade,
         safetyOfficer: 'Safety Manager',
         startDate: '2025-01-01'
       });
@@ -270,6 +287,16 @@ function App() {
           </div>
         ) : view === 'stats' ? (
           <StatsDashboard onBack={() => setView('landing')} />
+        ) : view === 'seo_landing' ? (
+          <SEOLandingPage
+            trade={seoParams.trade}
+            city={seoParams.city}
+            state={seoParams.state}
+            onBack={() => {
+              setSeoParams(null);
+              setView('landing');
+            }}
+          />
         ) : (
           <Generator
             onBack={() => {
