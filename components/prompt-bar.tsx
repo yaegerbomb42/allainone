@@ -17,18 +17,18 @@ export function PromptBar({ onSubmit, className }: PromptBarProps) {
   const [prompt, setPrompt] = useState("");
   const [mascotState, setMascotState] = useState<MascotState>("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!prompt.trim()) return;
 
     setMascotState("listening");
     
     // Simulate processing delay
-    setTimeout(() => {
+    setTimeout(async () => {
       setMascotState("sorting");
       
-      // Classify the prompt
-      const plan = promptClassifier.classifyMulti(prompt);
+      // Classify the prompt (now async with LLM support)
+      const plan = await promptClassifier.classifyMulti(prompt);
       
       setTimeout(() => {
         if (plan.actions.length > 0) {
