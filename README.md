@@ -84,6 +84,15 @@
      ```
    - Fill in your Firebase credentials in `.env.local`
 
+3a. **Configure OpenAI (Optional but Recommended)**
+   - The app uses OpenAI GPT-4 for intelligent prompt classification
+   - Get an API key from [platform.openai.com](https://platform.openai.com)
+   - Add to `.env.local`:
+     ```bash
+     OPENAI_API_KEY=sk-your-api-key-here
+     ```
+   - **Note:** Without an API key, the app falls back to pattern-based classification (still works great!)
+
 4. **Deploy Firestore security rules**
    ```bash
    # Install Firebase CLI if you haven't
@@ -168,13 +177,33 @@ users/{uid}
 
 ### Classifier Logic
 
-The deterministic classifier (`lib/classifier.ts`) uses pattern matching to:
-1. Detect item type (todo, goal, habit, meal, journal)
-2. Extract title and metadata (priority, date, tags)
-3. Generate an action plan with confidence score
-4. Support multi-item prompts (e.g., "buy milk and eggs")
+The enhanced classifier (`lib/classifier.ts`) uses a hybrid approach combining LLM-based classification with pattern-matching fallback:
 
-**Future**: Replace with LLM-based classification while maintaining the same interface.
+**LLM Mode (with OpenAI API key):**
+- Uses GPT-4o-mini for intelligent natural language understanding
+- Automatically detects multiple items in a single prompt
+- Extracts dates, times, priorities, and item types with high accuracy
+- Handles complex scheduling ("next Monday at 3pm", "tomorrow morning", etc.)
+- Provides confidence scores and reasoning for classifications
+
+**Pattern Matching Fallback (without API key):**
+1. Detect item type (todo, goal, habit, meal, journal, event, note)
+2. Extract title and metadata (priority, date, time, tags)
+3. Enhanced date/time parsing (relative dates, days of week, specific dates/times)
+4. Improved priority detection (urgent, high, medium, low)
+5. Advanced multi-item splitting (handles "and", commas, semicolons)
+6. Generate an action plan with confidence score
+
+**Features:**
+- ✅ Maintains the same ActionPlan interface for backward compatibility
+- ✅ Graceful degradation when LLM is unavailable
+- ✅ Comprehensive date/time parsing (today, tomorrow, Monday, 12/25, 3pm, etc.)
+- ✅ Enhanced priority keywords (urgent, asap, important, critical, etc.)
+- ✅ Better multi-item detection ("buy milk and eggs" → 2 items)
+- ✅ Support for 7 item types: todo, goal, habit, meal, journal, event, note
+
+**Configuration:**
+Set `OPENAI_API_KEY` in your `.env.local` file to enable LLM mode. Without it, the classifier falls back to pattern matching automatically.
 
 ### Security
 
@@ -255,7 +284,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions for:
 
 ## 🔮 Future Enhancements
 
-- [ ] LLM integration for more intelligent classification
+- [x] LLM integration for more intelligent classification (✅ Completed with GPT-4)
 - [ ] Real-time collaboration (multi-user per account)
 - [ ] Mobile apps (React Native)
 - [ ] Calendar integrations

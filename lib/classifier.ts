@@ -68,12 +68,12 @@ export class PromptClassifier {
     delete: /(?:delete|remove|cancel|discard)/i,
   };
 
-  // Enhanced priority patterns
+  // Enhanced priority patterns (order matters - check more specific first)
   private priorityPatterns = {
     urgent: /(?:urgent|asap|immediately|critical|emergency|right now)/i,
-    high: /(?:important|high priority|crucial|significant|priority)/i,
-    medium: /(?:medium priority|normal|moderate)/i,
     low: /(?:low priority|when I can|eventually|sometime|optional)/i,
+    high: /(?:high priority|important|crucial|significant|priority)/i,
+    medium: /(?:medium priority|normal|moderate)/i,
   };
 
   // Comprehensive time patterns for dates and times
@@ -305,17 +305,26 @@ Important:
     }
 
     if (itemType) {
-      // Extract title (remove type keywords)
+      // Extract title - be more selective about what we remove
       let title = normalizedPrompt;
-      for (const patterns of Object.values(this.patterns)) {
-        for (const pattern of patterns) {
-          title = title.replace(pattern, "").trim();
+      
+      // Only remove the specific trigger patterns that matched
+      for (const [type, patterns] of Object.entries(this.patterns)) {
+        if (type === itemType) {
+          for (const pattern of patterns) {
+            // Only replace if this pattern matched
+            if (pattern.test(title)) {
+              title = title.replace(pattern, "").trim();
+            }
+          }
         }
       }
 
-      // Clean up title
+      // Clean up title - remove leading articles
       title = title.replace(/^(a|an|the)\s+/i, "").trim();
-      if (!title) {
+      
+      // If title is empty or too short, use original
+      if (!title || title.length < 2) {
         title = normalizedPrompt;
       }
 
