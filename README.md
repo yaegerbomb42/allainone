@@ -85,7 +85,7 @@
    - Fill in your Firebase credentials in `.env.local`
 
 3a. **Configure OpenAI (Optional but Recommended)**
-   - The app uses OpenAI GPT-4 for intelligent prompt classification
+   - The app uses OpenAI GPT-4o-mini for intelligent prompt classification
    - Get an API key from [platform.openai.com](https://platform.openai.com)
    - Add to `.env.local`:
      ```bash
@@ -284,7 +284,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions for:
 
 ## 🔮 Future Enhancements
 
-- [x] LLM integration for more intelligent classification (✅ Completed with GPT-4)
+- [x] LLM integration for more intelligent classification (✅ Completed with GPT-4o-mini)
 - [ ] Real-time collaboration (multi-user per account)
 - [ ] Mobile apps (React Native)
 - [ ] Calendar integrations

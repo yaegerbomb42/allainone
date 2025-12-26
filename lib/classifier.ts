@@ -403,7 +403,10 @@ Important:
     
     for (const majorPart of majorParts) {
       // For each major part, try to split on comma or "and" if it seems like a list
-      // Pattern: split on ", and" or just comma, or standalone "and" between items
+      // Pattern breakdown:
+      // - /,\s+(?:and\s+)?/  : Match ", and " or just ","
+      // - /,\s+/             : Match comma followed by whitespace
+      // - /\s+and\s+(?=...)/i: Match " and " only if followed by action verbs (lookahead)
       const subParts = majorPart.split(/,\s+(?:and\s+)?|,\s+|\s+and\s+(?=(?:buy|get|call|email|add|create))/i);
       
       for (const part of subParts) {
