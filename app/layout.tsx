@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AuthProvider } from "@/lib/auth-context";
+import { Providers } from "@/components/providers";
+import { DriftAvatar } from "@/components/gamification/drift-avatar";
 
 export const metadata: Metadata = {
   title: "ALLAInOne - Your AI-Powered Life Assistant",
@@ -15,9 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased">
-        <AuthProvider>
+        <Providers>
           {children}
-        </AuthProvider>
+          <DriftAvatar />
+        </Providers>
       </body>
     </html>
   );

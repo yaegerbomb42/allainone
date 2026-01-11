@@ -2,6 +2,7 @@ import {
   collection,
   doc,
   addDoc,
+  setDoc,
   updateDoc,
   deleteDoc,
   getDoc,
@@ -23,14 +24,14 @@ export const itemsService = {
   async create(userId: string, itemData: Omit<Item, "id" | "userId" | "createdAt" | "updatedAt">): Promise<string> {
     const itemRef = collection(db, `users/${userId}/items`);
     const now = Timestamp.now();
-    
+
     const docRef = await addDoc(itemRef, {
       ...itemData,
       userId,
       createdAt: now,
       updatedAt: now,
     });
-    
+
     return docRef.id;
   },
 
@@ -50,11 +51,11 @@ export const itemsService = {
   async get(userId: string, itemId: string): Promise<Item | null> {
     const itemRef = doc(db, `users/${userId}/items`, itemId);
     const snapshot = await getDoc(itemRef);
-    
+
     if (!snapshot.exists()) {
       return null;
     }
-    
+
     return {
       id: snapshot.id,
       ...snapshot.data(),
@@ -104,13 +105,13 @@ export const itemsService = {
 export const eventsService = {
   async create(userId: string, eventData: Omit<Event, "id" | "userId" | "createdAt">): Promise<string> {
     const eventsRef = collection(db, `users/${userId}/events`);
-    
+
     const docRef = await addDoc(eventsRef, {
       ...eventData,
       userId,
       createdAt: Timestamp.now(),
     });
-    
+
     return docRef.id;
   },
 
@@ -140,13 +141,13 @@ export const eventsService = {
 export const promptsService = {
   async create(userId: string, promptData: Omit<Prompt, "id" | "userId" | "createdAt">): Promise<string> {
     const promptsRef = collection(db, `users/${userId}/prompts`);
-    
+
     const docRef = await addDoc(promptsRef, {
       ...promptData,
       userId,
       createdAt: Timestamp.now(),
     });
-    
+
     return docRef.id;
   },
 
@@ -158,7 +159,7 @@ export const promptsService = {
   async list(userId: string, limit = 50): Promise<Prompt[]> {
     const promptsRef = collection(db, `users/${userId}/prompts`);
     const q = query(promptsRef, orderBy("createdAt", "desc"));
-    
+
     const snapshot = await getDocs(q);
 
     return snapshot.docs.slice(0, limit).map((doc) => ({
@@ -183,7 +184,7 @@ export async function executeActionPlan(
     if (action.type === "create_item" && action.itemType && action.data) {
       const itemRef = doc(collection(db, `users/${userId}/items`));
       const now = Timestamp.now();
-      
+
       batch.set(itemRef, {
         ...action.data,
         type: action.itemType,
@@ -195,11 +196,75 @@ export async function executeActionPlan(
         createdAt: now,
         updatedAt: now,
       });
-      
+
       createdItemIds.push(itemRef.id);
     }
   }
 
   await batch.commit();
+  await batch.commit();
   return createdItemIds;
 }
+
+/**
+ * Settings CRUD operations
+ */
+export const settingsService = {
+  async getAppSettings(userId: string): Promise<any> { // eslint-disable-line @typescript-eslint/no-explicit-any
+    const settingsRef = doc(db, `users/${userId}/settings/general`);
+    const snapshot = await getDoc(settingsRef);
+    return snapshot.exists() ? snapshot.data() : {};
+  },
+
+  async saveAppSettings(userId: string, settings: any): Promise<void> { // eslint-disable-line @typescript-eslint/no-explicit-any
+    const settingsRef = doc(db, `users/${userId}/settings/general`);
+    await setDoc(settingsRef, settings, { merge: true });
+  }
+};
+
+/**
+ * User operations
+ */
+export const userService = {
+  async getUserDoc(userId: string): Promise<any> { // eslint-disable-line @typescript-eslint/no-explicit-any
+    const userRef = doc(db, `users/${userId}`);
+    const snapshot = await getDoc(userRef);
+    return snapshot.exists() ? snapshot.data() : null;
+  },
+
+  async initializeUserData(userId: string, email: string, name?: string): Promise<void> {
+    const userRef = doc(db, `users/${userId}`);
+    const now = Timestamp.now();
+
+    // 1. Create User Doc
+    await setDoc(userRef, {
+      uid: userId,
+      email,
+      name: name || 'User',
+      createdAt: now,
+      updatedAt: now,
+      onboardingCompleted: false,
+    }, { merge: true });
+
+    // 2. Create Initial Settings
+    await settingsService.saveAppSettings(userId, {
+      appearance: { theme: 'system', accentColor: 'indigo' },
+      geminiApiKey: '',
+    });
+
+    // 3. Create Welcome Item
+    await itemsService.create(userId, {
+      type: 'note',
+      title: 'Welcome to AllInOne',
+      body: 'This is your new productivity hub. Try creating a goal!',
+      status: 'active',
+      priority: 'medium'
+    });
+  },
+
+  async robustSyncUserData(userId: string): Promise<void> {
+    // Placeholder for advanced sync logic
+    console.log(`Syncing data for ${userId}`);
+  }
+};
+
