@@ -41,7 +41,7 @@ export const TooltipTrigger: React.FC<{ children: React.ReactNode; className?: s
     const context = React.useContext(TooltipContext);
     if (!context) throw new Error("TooltipTrigger must be used within Tooltip");
 
-    const handleMouseEnter = (_e: React.MouseEvent) => {
+    const handleMouseEnter = () => {
         context.setIsVisible(true);
         // Determine position relative to viewport or parent?
         // Simplified: Just centered above

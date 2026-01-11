@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useDriftCharacter } from '@/context/DriftCharacterContext';
 import Icon from '@/components/ui/icon';
 import { useRouter, usePathname } from 'next/navigation';
@@ -42,7 +42,6 @@ export const DriftAvatar = () => {
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${moodConfig.color} blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500`} />
 
                 <div className="relative z-10 text-white">
-                    {/* @ts-ignore */}
                     <Icon name={moodConfig.icon} className="w-7 h-7" />
                 </div>
 
