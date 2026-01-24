@@ -111,7 +111,8 @@ npm run lint
 
 ### Phase 2: Type Safety (P1)
 
-### [ ] Task 2.1: Update type definitions in types.ts
+### [x] Task 2.1: Update type definitions in types.ts
+<!-- chat-id: 788f8035-f094-4a01-a59b-a7b3b9375a7f -->
 **Location**: `lib/types.ts`
 **Description**: Add FirestoreTimestamp, Achievement, AppSettings, UserDocument interfaces. Update existing types to remove `any`
 **Verification**: 
