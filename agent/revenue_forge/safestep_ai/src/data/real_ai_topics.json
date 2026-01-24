@@ -1,0 +1,1241 @@
+[
+  {
+    "title": "Falling from Heights: Scaffolding Safety",
+    "desc": "Falling from heights is one of the leading causes of death in the construction industry. Scaffolding is often the primary means of access for workers at heights. Ensure scaffolding is erected, maintained, and used correctly.",
+    "oshaRef": "29 CFR 1926.451",
+    "story": "On a construction site, a worker failed to secure a scaffold plank, resulting in a 30-foot fall. The worker suffered severe head injuries and was hospitalized for weeks.",
+    "checklist": [
+      "Scaffolding is erected on level ground",
+      "Scaffolding is secured to the building or structure",
+      "Planks are securely fastened to the scaffolding"
+    ],
+    "trainerNotes": "Conduct regular scaffolding inspections and ensure workers are properly trained on scaffolding safety.",
+    "talkingPoints": [
+      "What are the primary causes of scaffolding accidents?",
+      "How can workers prevent falls from scaffolding?",
+      "What are the consequences of failing to secure scaffolding?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of scaffolding accidents?",
+      "answer": "Failing to secure scaffolding or using it incorrectly"
+    }
+  },
+  {
+    "title": "Electrical Safety: Arc Flash Hazards",
+    "desc": "Electrical shock and arc flash hazards can be deadly in the construction industry. Ensure workers are aware of electrical hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.416",
+    "story": "A worker was electrocuted while working on a live electrical panel. The worker's body arced with electricity, causing severe burns and death.",
+    "checklist": [
+      "Identify electrical hazards before starting work",
+      "Use personal protective equipment (PPE) near electrical sources",
+      "De-energize electrical sources before maintenance"
+    ],
+    "trainerNotes": "Conduct regular electrical safety training and ensure workers are aware of arc flash hazards.",
+    "talkingPoints": [
+      "What are the primary causes of electrical accidents?",
+      "How can workers prevent electrical shock?",
+      "What are the consequences of failing to de-energize electrical sources?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of electrical accidents?",
+      "answer": "Failing to identify or follow proper procedures for electrical hazards"
+    }
+  },
+  {
+    "title": "Crane and Hoist Safety",
+    "desc": "Crane and hoist accidents can be devastating in the construction industry. Ensure workers are aware of crane and hoist hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.550",
+    "story": "A crane operator failed to properly secure a load, resulting in a 10-ton crane boom falling and crushing a worker.",
+    "checklist": [
+      "Conduct regular crane inspections",
+      "Ensure crane operators are properly trained and certified",
+      "Use proper rigging and lifting techniques"
+    ],
+    "trainerNotes": "Conduct regular crane and hoist safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of crane and hoist accidents?",
+      "How can workers prevent crane and hoist accidents?",
+      "What are the consequences of failing to properly secure loads?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of crane and hoist accidents?",
+      "answer": "Failing to properly secure loads or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fall Protection: Harnesses and Hard Hats",
+    "desc": "Fall protection is critical in the construction industry. Ensure workers are aware of fall protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.501",
+    "story": "A worker fell 20 feet while working on a roof without a harness. The worker suffered severe head injuries and was hospitalized for weeks.",
+    "checklist": [
+      "Wear a hard hat and safety glasses",
+      "Use a harness when working at heights",
+      "Ensure fall protection equipment is properly inspected and maintained"
+    ],
+    "trainerNotes": "Conduct regular fall protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fall protection accidents?",
+      "How can workers prevent fall protection accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fall protection accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Confined Space Entry: Permits and Ventilation",
+    "desc": "Confined space entry can be deadly in the construction industry. Ensure workers are aware of confined space hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.1201",
+    "story": "A worker entered a confined space without proper ventilation, resulting in asphyxiation. The worker died due to lack of oxygen.",
+    "checklist": [
+      "Conduct a confined space hazard assessment",
+      "Obtain a permit before entering a confined space",
+      "Ensure proper ventilation before entering a confined space"
+    ],
+    "trainerNotes": "Conduct regular confined space training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of confined space entry accidents?",
+      "How can workers prevent confined space entry accidents?",
+      "What are the consequences of failing to obtain a permit?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of confined space entry accidents?",
+      "answer": "Failing to obtain a permit or follow proper procedures"
+    }
+  },
+  {
+    "title": "Lockout/Tagout: Preventing Unexpected Starts",
+    "desc": "Lockout/tagout is critical in preventing unexpected starts of equipment and machinery. Ensure workers are aware of lockout/tagout hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.147",
+    "story": "A worker was injured when a machine suddenly started while they were performing maintenance. The worker's hand was crushed by the machine.",
+    "checklist": [
+      "Conduct a lockout/tagout procedure before maintenance",
+      "Ensure all energy sources are isolated",
+      "Use a lockout/tagout device to prevent unexpected starts"
+    ],
+    "trainerNotes": "Conduct regular lockout/tagout training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of lockout/tagout accidents?",
+      "How can workers prevent lockout/tagout accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of lockout/tagout accidents?",
+      "answer": "Failing to follow proper procedures or isolate energy sources"
+    }
+  },
+  {
+    "title": "Eye and Face Protection: Safety Glasses and Goggles",
+    "desc": "Eye and face protection is critical in preventing injuries from flying particles and chemicals. Ensure workers are aware of eye and face hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.133",
+    "story": "A worker was blinded by a flying particle while performing welding. The worker suffered permanent vision loss.",
+    "checklist": [
+      "Wear safety glasses or goggles when working with power tools",
+      "Use eye protection when working with chemicals",
+      "Ensure eye protection is properly fitted and maintained"
+    ],
+    "trainerNotes": "Conduct regular eye and face protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of eye and face protection accidents?",
+      "How can workers prevent eye and face protection accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of eye and face protection accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fire Safety: Extinguishers and Emergency Procedures",
+    "desc": "Fire safety is critical in preventing injuries and fatalities from fires. Ensure workers are aware of fire hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.157",
+    "story": "A fire broke out in a warehouse, causing widespread damage and injuring several workers. The workers were unable to escape due to locked doors.",
+    "checklist": [
+      "Conduct regular fire safety training",
+      "Ensure fire extinguishers are properly inspected and maintained",
+      "Develop an emergency evacuation plan"
+    ],
+    "trainerNotes": "Conduct regular fire safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fire safety accidents?",
+      "How can workers prevent fire safety accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fire safety accidents?",
+      "answer": "Failing to follow proper procedures or maintain fire extinguishers"
+    }
+  },
+  {
+    "title": "Hazard Communication: Labels and Safety Data Sheets",
+    "desc": "Hazard communication is critical in preventing injuries and fatalities from hazardous chemicals. Ensure workers are aware of hazard communication hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.1200",
+    "story": "A worker was exposed to a hazardous chemical without proper training or PPE. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Conduct regular hazard communication training",
+      "Ensure labels and safety data sheets are properly maintained",
+      "Develop a hazard communication plan"
+    ],
+    "trainerNotes": "Conduct regular hazard communication training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of hazard communication accidents?",
+      "How can workers prevent hazard communication accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of hazard communication accidents?",
+      "answer": "Failing to follow proper procedures or maintain labels and safety data sheets"
+    }
+  },
+  {
+    "title": "Personal Protective Equipment (PPE): Masks and Respirators",
+    "desc": "Personal protective equipment (PPE) is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of PPE hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.134",
+    "story": "A worker was exposed to hazardous dust without proper PPE. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Wear a mask or respirator when working with hazardous materials",
+      "Ensure PPE is properly fitted and maintained",
+      "Conduct regular PPE training"
+    ],
+    "trainerNotes": "Conduct regular PPE training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of PPE accidents?",
+      "How can workers prevent PPE accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of PPE accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fall Protection: Scaffolding and Ladders",
+    "desc": "Fall protection is critical in preventing injuries and fatalities from falls. Ensure workers are aware of fall protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.501",
+    "story": "A worker fell from a ladder while working on a roof. The worker suffered severe head injuries and was hospitalized.",
+    "checklist": [
+      "Use a ladder or scaffolding when working at heights",
+      "Ensure ladders and scaffolding are properly inspected and maintained",
+      "Wear a harness when working at heights"
+    ],
+    "trainerNotes": "Conduct regular fall protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fall protection accidents?",
+      "How can workers prevent fall protection accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fall protection accidents?",
+      "answer": "Failing to follow proper procedures or maintain ladders and scaffolding"
+    }
+  },
+  {
+    "title": "Crane and Hoist Safety: Pre-Shift Inspections",
+    "desc": "Crane and hoist safety is critical in preventing injuries and fatalities from crane and hoist accidents. Ensure workers are aware of crane and hoist hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.550",
+    "story": "A crane operator failed to conduct a pre-shift inspection, resulting in a crane boom falling and crushing a worker.",
+    "checklist": [
+      "Conduct a pre-shift inspection before operating a crane or hoist",
+      "Ensure all safety devices are properly functioning",
+      "Use proper rigging and lifting techniques"
+    ],
+    "trainerNotes": "Conduct regular crane and hoist safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of crane and hoist accidents?",
+      "How can workers prevent crane and hoist accidents?",
+      "What are the consequences of failing to conduct a pre-shift inspection?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of crane and hoist accidents?",
+      "answer": "Failing to conduct a pre-shift inspection or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fire Extinguisher Training: Proper Use and Maintenance",
+    "desc": "Fire extinguisher training is critical in preventing injuries and fatalities from fires. Ensure workers are aware of fire extinguisher hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.157",
+    "story": "A worker used a fire extinguisher incorrectly, resulting in the fire spreading and causing widespread damage.",
+    "checklist": [
+      "Conduct regular fire extinguisher training",
+      "Ensure fire extinguishers are properly inspected and maintained",
+      "Use a fire extinguisher only when necessary"
+    ],
+    "trainerNotes": "Conduct regular fire extinguisher training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fire extinguisher accidents?",
+      "How can workers prevent fire extinguisher accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fire extinguisher accidents?",
+      "answer": "Failing to follow proper procedures or maintain fire extinguishers"
+    }
+  },
+  {
+    "title": "Respiratory Protection: Masks and Respirators",
+    "desc": "Respiratory protection is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of respiratory protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.134",
+    "story": "A worker was exposed to hazardous dust without proper respiratory protection. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Wear a mask or respirator when working with hazardous materials",
+      "Ensure respiratory protection is properly fitted and maintained",
+      "Conduct regular respiratory protection training"
+    ],
+    "trainerNotes": "Conduct regular respiratory protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of respiratory protection accidents?",
+      "How can workers prevent respiratory protection accidents?",
+      "What are the consequences of failing to wear proper respiratory protection?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of respiratory protection accidents?",
+      "answer": "Failing to wear proper respiratory protection or follow proper procedures"
+    }
+  },
+  {
+    "title": "Electrical Safety: Arc Flash and Shock Hazards",
+    "desc": "Electrical safety is critical in preventing injuries and fatalities from electrical shock and arc flash hazards. Ensure workers are aware of electrical hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.416",
+    "story": "A worker was electrocuted while working on a live electrical panel. The worker's body arced with electricity, causing severe burns and death.",
+    "checklist": [
+      "Identify electrical hazards before starting work",
+      "Use personal protective equipment (PPE) near electrical sources",
+      "De-energize electrical sources before maintenance"
+    ],
+    "trainerNotes": "Conduct regular electrical safety training and ensure workers are aware of arc flash and shock hazards.",
+    "talkingPoints": [
+      "What are the primary causes of electrical accidents?",
+      "How can workers prevent electrical accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of electrical accidents?",
+      "answer": "Failing to follow proper procedures or identify electrical hazards"
+    }
+  },
+  {
+    "title": "Confined Space Entry: Ventilation and Monitoring",
+    "desc": "Confined space entry is critical in preventing injuries and fatalities from confined space hazards. Ensure workers are aware of confined space hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.1201",
+    "story": "A worker entered a confined space without proper ventilation, resulting in asphyxiation. The worker died due to lack of oxygen.",
+    "checklist": [
+      "Conduct a confined space hazard assessment",
+      "Obtain a permit before entering a confined space",
+      "Ensure proper ventilation before entering a confined space"
+    ],
+    "trainerNotes": "Conduct regular confined space training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of confined space entry accidents?",
+      "How can workers prevent confined space entry accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of confined space entry accidents?",
+      "answer": "Failing to follow proper procedures or obtain a permit"
+    }
+  },
+  {
+    "title": "Lockout/Tagout: Equipment and Machinery",
+    "desc": "Lockout/tagout is critical in preventing injuries and fatalities from unexpected starts of equipment and machinery. Ensure workers are aware of lockout/tagout hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.147",
+    "story": "A worker was injured when a machine suddenly started while they were performing maintenance. The worker's hand was crushed by the machine.",
+    "checklist": [
+      "Conduct a lockout/tagout procedure before maintenance",
+      "Ensure all energy sources are isolated",
+      "Use a lockout/tagout device to prevent unexpected starts"
+    ],
+    "trainerNotes": "Conduct regular lockout/tagout training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of lockout/tagout accidents?",
+      "How can workers prevent lockout/tagout accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of lockout/tagout accidents?",
+      "answer": "Failing to follow proper procedures or isolate energy sources"
+    }
+  },
+  {
+    "title": "Hazardous Materials: Storage and Handling",
+    "desc": "Hazardous materials are critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of hazardous materials hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.1200",
+    "story": "A worker was exposed to a hazardous chemical without proper training or PPE. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Conduct regular hazardous materials training",
+      "Ensure labels and safety data sheets are properly maintained",
+      "Develop a hazardous materials plan"
+    ],
+    "trainerNotes": "Conduct regular hazardous materials training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of hazardous materials accidents?",
+      "How can workers prevent hazardous materials accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of hazardous materials accidents?",
+      "answer": "Failing to follow proper procedures or maintain labels and safety data sheets"
+    }
+  },
+  {
+    "title": "Personal Protective Equipment (PPE): Head and Foot Protection",
+    "desc": "Personal protective equipment (PPE) is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of PPE hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.133",
+    "story": "A worker was struck by a falling object without proper head protection. The worker suffered severe head injuries and was hospitalized.",
+    "checklist": [
+      "Wear a hard hat and safety glasses",
+      "Use foot protection when working in areas with hazardous materials",
+      "Ensure PPE is properly fitted and maintained"
+    ],
+    "trainerNotes": "Conduct regular PPE training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of PPE accidents?",
+      "How can workers prevent PPE accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of PPE accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fire Safety: Emergency Escape Plans",
+    "desc": "Fire safety is critical in preventing injuries and fatalities from fires. Ensure workers are aware of fire hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.157",
+    "story": "A fire broke out in a warehouse, causing widespread damage and injuring several workers. The workers were unable to escape due to locked doors.",
+    "checklist": [
+      "Conduct regular fire safety training",
+      "Ensure fire extinguishers are properly inspected and maintained",
+      "Develop an emergency evacuation plan"
+    ],
+    "trainerNotes": "Conduct regular fire safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fire safety accidents?",
+      "How can workers prevent fire safety accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fire safety accidents?",
+      "answer": "Failing to follow proper procedures or maintain fire extinguishers"
+    }
+  },
+  {
+    "title": "Respiratory Protection: Dust and Fumes",
+    "desc": "Respiratory protection is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of respiratory protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.134",
+    "story": "A worker was exposed to hazardous dust without proper respiratory protection. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Wear a mask or respirator when working with hazardous materials",
+      "Ensure respiratory protection is properly fitted and maintained",
+      "Conduct regular respiratory protection training"
+    ],
+    "trainerNotes": "Conduct regular respiratory protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of respiratory protection accidents?",
+      "How can workers prevent respiratory protection accidents?",
+      "What are the consequences of failing to wear proper respiratory protection?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of respiratory protection accidents?",
+      "answer": "Failing to wear proper respiratory protection or follow proper procedures"
+    }
+  },
+  {
+    "title": "Confined Space Entry: Ventilation and Monitoring",
+    "desc": "Confined space entry is critical in preventing injuries and fatalities from confined space hazards. Ensure workers are aware of confined space hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.1201",
+    "story": "A worker entered a confined space without proper ventilation, resulting in asphyxiation. The worker died due to lack of oxygen.",
+    "checklist": [
+      "Conduct a confined space hazard assessment",
+      "Obtain a permit before entering a confined space",
+      "Ensure proper ventilation before entering a confined space"
+    ],
+    "trainerNotes": "Conduct regular confined space training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of confined space entry accidents?",
+      "How can workers prevent confined space entry accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of confined space entry accidents?",
+      "answer": "Failing to follow proper procedures or obtain a permit"
+    }
+  },
+  {
+    "title": "Lockout/Tagout: Equipment and Machinery",
+    "desc": "Lockout/tagout is critical in preventing injuries and fatalities from unexpected starts of equipment and machinery. Ensure workers are aware of lockout/tagout hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.147",
+    "story": "A worker was injured when a machine suddenly started while they were performing maintenance. The worker's hand was crushed by the machine.",
+    "checklist": [
+      "Conduct a lockout/tagout procedure before maintenance",
+      "Ensure all energy sources are isolated",
+      "Use a lockout/tagout device to prevent unexpected starts"
+    ],
+    "trainerNotes": "Conduct regular lockout/tagout training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of lockout/tagout accidents?",
+      "How can workers prevent lockout/tagout accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of lockout/tagout accidents?",
+      "answer": "Failing to follow proper procedures or isolate energy sources"
+    }
+  },
+  {
+    "title": "Hazardous Materials: Storage and Handling",
+    "desc": "Hazardous materials are critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of hazardous materials hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.1200",
+    "story": "A worker was exposed to a hazardous chemical without proper training or PPE. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Conduct regular hazardous materials training",
+      "Ensure labels and safety data sheets are properly maintained",
+      "Develop a hazardous materials plan"
+    ],
+    "trainerNotes": "Conduct regular hazardous materials training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of hazardous materials accidents?",
+      "How can workers prevent hazardous materials accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of hazardous materials accidents?",
+      "answer": "Failing to follow proper procedures or maintain labels and safety data sheets"
+    }
+  },
+  {
+    "title": "Personal Protective Equipment (PPE): Head and Foot Protection",
+    "desc": "Personal protective equipment (PPE) is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of PPE hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.133",
+    "story": "A worker was struck by a falling object without proper head protection. The worker suffered severe head injuries and was hospitalized.",
+    "checklist": [
+      "Wear a hard hat and safety glasses",
+      "Use foot protection when working in areas with hazardous materials",
+      "Ensure PPE is properly fitted and maintained"
+    ],
+    "trainerNotes": "Conduct regular PPE training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of PPE accidents?",
+      "How can workers prevent PPE accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of PPE accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fire Safety: Emergency Escape Plans",
+    "desc": "Fire safety is critical in preventing injuries and fatalities from fires. Ensure workers are aware of fire hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.157",
+    "story": "A fire broke out in a warehouse, causing widespread damage and injuring several workers. The workers were unable to escape due to locked doors.",
+    "checklist": [
+      "Conduct regular fire safety training",
+      "Ensure fire extinguishers are properly inspected and maintained",
+      "Develop an emergency evacuation plan"
+    ],
+    "trainerNotes": "Conduct regular fire safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fire safety accidents?",
+      "How can workers prevent fire safety accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fire safety accidents?",
+      "answer": "Failing to follow proper procedures or maintain fire extinguishers"
+    }
+  },
+  {
+    "title": "Respiratory Protection: Dust and Fumes",
+    "desc": "Respiratory protection is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of respiratory protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.134",
+    "story": "A worker was exposed to hazardous dust without proper respiratory protection. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Wear a mask or respirator when working with hazardous materials",
+      "Ensure respiratory protection is properly fitted and maintained",
+      "Conduct regular respiratory protection training"
+    ],
+    "trainerNotes": "Conduct regular respiratory protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of respiratory protection accidents?",
+      "How can workers prevent respiratory protection accidents?",
+      "What are the consequences of failing to wear proper respiratory protection?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of respiratory protection accidents?",
+      "answer": "Failing to wear proper respiratory protection or follow proper procedures"
+    }
+  },
+  {
+    "title": "Confined Space Entry: Ventilation and Monitoring",
+    "desc": "Confined space entry is critical in preventing injuries and fatalities from confined space hazards. Ensure workers are aware of confined space hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1926.1201",
+    "story": "A worker entered a confined space without proper ventilation, resulting in asphyxiation. The worker died due to lack of oxygen.",
+    "checklist": [
+      "Conduct a confined space hazard assessment",
+      "Obtain a permit before entering a confined space",
+      "Ensure proper ventilation before entering a confined space"
+    ],
+    "trainerNotes": "Conduct regular confined space training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of confined space entry accidents?",
+      "How can workers prevent confined space entry accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of confined space entry accidents?",
+      "answer": "Failing to follow proper procedures or obtain a permit"
+    }
+  },
+  {
+    "title": "Lockout/Tagout: Equipment and Machinery",
+    "desc": "Lockout/tagout is critical in preventing injuries and fatalities from unexpected starts of equipment and machinery. Ensure workers are aware of lockout/tagout hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.147",
+    "story": "A worker was injured when a machine suddenly started while they were performing maintenance. The worker's hand was crushed by the machine.",
+    "checklist": [
+      "Conduct a lockout/tagout procedure before maintenance",
+      "Ensure all energy sources are isolated",
+      "Use a lockout/tagout device to prevent unexpected starts"
+    ],
+    "trainerNotes": "Conduct regular lockout/tagout training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of lockout/tagout accidents?",
+      "How can workers prevent lockout/tagout accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of lockout/tagout accidents?",
+      "answer": "Failing to follow proper procedures or isolate energy sources"
+    }
+  },
+  {
+    "title": "Hazardous Materials: Storage and Handling",
+    "desc": "Hazardous materials are critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of hazardous materials hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.1200",
+    "story": "A worker was exposed to a hazardous chemical without proper training or PPE. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Conduct regular hazardous materials training",
+      "Ensure labels and safety data sheets are properly maintained",
+      "Develop a hazardous materials plan"
+    ],
+    "trainerNotes": "Conduct regular hazardous materials training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of hazardous materials accidents?",
+      "How can workers prevent hazardous materials accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of hazardous materials accidents?",
+      "answer": "Failing to follow proper procedures or maintain labels and safety data sheets"
+    }
+  },
+  {
+    "title": "Personal Protective Equipment (PPE): Head and Foot Protection",
+    "desc": "Personal protective equipment (PPE) is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of PPE hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.133",
+    "story": "A worker was struck by a falling object without proper head protection. The worker suffered severe head injuries and was hospitalized.",
+    "checklist": [
+      "Wear a hard hat and safety glasses",
+      "Use foot protection when working in areas with hazardous materials",
+      "Ensure PPE is properly fitted and maintained"
+    ],
+    "trainerNotes": "Conduct regular PPE training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of PPE accidents?",
+      "How can workers prevent PPE accidents?",
+      "What are the consequences of failing to wear proper PPE?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of PPE accidents?",
+      "answer": "Failing to wear proper PPE or follow proper procedures"
+    }
+  },
+  {
+    "title": "Fire Safety: Emergency Escape Plans",
+    "desc": "Fire safety is critical in preventing injuries and fatalities from fires. Ensure workers are aware of fire hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.157",
+    "story": "A fire broke out in a warehouse, causing widespread damage and injuring several workers. The workers were unable to escape due to locked doors.",
+    "checklist": [
+      "Conduct regular fire safety training",
+      "Ensure fire extinguishers are properly inspected and maintained",
+      "Develop an emergency evacuation plan"
+    ],
+    "trainerNotes": "Conduct regular fire safety training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of fire safety accidents?",
+      "How can workers prevent fire safety accidents?",
+      "What are the consequences of failing to follow proper procedures?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of fire safety accidents?",
+      "answer": "Failing to follow proper procedures or maintain fire extinguishers"
+    }
+  },
+  {
+    "title": "Respiratory Protection: Dust and Fumes",
+    "desc": "Respiratory protection is critical in preventing injuries and fatalities from hazardous materials. Ensure workers are aware of respiratory protection hazards and follow proper procedures.",
+    "oshaRef": "29 CFR 1910.134",
+    "story": "A worker was exposed to hazardous dust without proper respiratory protection. The worker suffered severe respiratory problems and was hospitalized.",
+    "checklist": [
+      "Wear a mask or respirator when working with hazardous materials",
+      "Ensure respiratory protection is properly fitted and maintained",
+      "Conduct regular respiratory protection training"
+    ],
+    "trainerNotes": "Conduct regular respiratory protection training and ensure workers are aware of hazards.",
+    "talkingPoints": [
+      "What are the primary causes of respiratory protection accidents?",
+      "How can workers prevent respiratory protection accidents?",
+      "What are the consequences of failing to wear proper respiratory protection?"
+    ],
+    "quiz": {
+      "question": "What is the primary cause of respiratory protection accidents?",
+      "answer": "Failing to wear proper respiratory protection or follow proper procedures"
+    }
+  },
+  {
+    "title": "27. Fall Protection - Harness Inspection",
+    "desc": "Regularly inspect harnesses for damage and wear to prevent falls and equipment failure.",
+    "oshaRef": "1926.502(d)(15)",
+    "story": "A worker fell 20 feet while cleaning a window on the 10th floor. The harness failed inspection due to worn straps, and the worker suffered severe injuries. The employer was fined $100,000 for violating OSHA regulations.",
+    "checklist": [
+      "Inspect harness straps for cuts, frays, or excessive wear",
+      "Check for proper buckle function and secure attachment to lanyard or lifeline",
+      "Verify harnesses are stored in a dry, clean environment"
+    ],
+    "trainerNotes": "Emphasize the importance of harness inspection and proper storage to prevent equipment failure.",
+    "talkingPoints": [
+      "What are the consequences of failing to inspect harnesses?",
+      "How often should harnesses be inspected?",
+      "What are some common signs of harness wear?"
+    ],
+    "quiz": {
+      "question": "How often should harnesses be inspected?",
+      "answer": "Daily"
+    }
+  },
+  {
+    "title": "28. Electrical Safety - Arc Flash Protection",
+    "desc": "Implement arc flash protection measures to prevent electrical shock and burns.",
+    "oshaRef": "1926.404(g)(1)",
+    "story": "A lineman was electrocuted while working on a live power line. The employer failed to provide arc flash protection, and the worker suffered severe burns and electrical shock. The employer was fined $200,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential arc flash hazards and implement protection measures",
+      "Use arc-rated personal protective equipment (PPE) when working on live electrical systems",
+      "Verify electrical systems are de-energized before maintenance"
+    ],
+    "trainerNotes": "Discuss the importance of arc flash protection and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of arc flash?",
+      "How can arc flash be prevented?",
+      "What are some common arc flash protection measures?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of arc-rated PPE?",
+      "answer": "To prevent electrical shock and burns"
+    }
+  },
+  {
+    "title": "29. Confined Space Entry - Permit Required",
+    "desc": "Develop and implement a confined space entry program to ensure safe entry and exit.",
+    "oshaRef": "1926.120(b)(1)",
+    "story": "A worker entered a confined space without a permit and was overcome by toxic fumes. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a confined space entry program and obtain necessary permits",
+      "Conduct a thorough hazard assessment before entry",
+      "Ensure proper ventilation and monitoring during entry"
+    ],
+    "trainerNotes": "Emphasize the importance of a permit-required confined space entry program.",
+    "talkingPoints": [
+      "What are the risks of confined space entry?",
+      "How can confined space entry be made safer?",
+      "What are the requirements for a permit-required confined space entry program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a confined space entry permit?",
+      "answer": "To ensure safe entry and exit"
+    }
+  },
+  {
+    "title": "30. Ladder Safety - Inspections and Use",
+    "desc": "Regularly inspect and use ladders safely to prevent falls and injuries.",
+    "oshaRef": "1926.1053(b)(1)",
+    "story": "A worker fell from a ladder while changing a light bulb. The ladder was not inspected before use, and the worker suffered severe injuries. The employer was fined $80,000 for violating OSHA regulations.",
+    "checklist": [
+      "Inspect ladders for damage and wear before use",
+      "Ensure ladders are positioned on a firm, level surface",
+      "Use ladder levelers or stabilizers when necessary"
+    ],
+    "trainerNotes": "Discuss the importance of ladder inspections and proper use.",
+    "talkingPoints": [
+      "What are the risks of ladder use?",
+      "How can ladder use be made safer?",
+      "What are some common ladder safety hazards?"
+    ],
+    "quiz": {
+      "question": "How often should ladders be inspected?",
+      "answer": "Before each use"
+    }
+  },
+  {
+    "title": "31. Personal Protective Equipment (PPE) - Eye and Face Protection",
+    "desc": "Provide and use eye and face protection to prevent injuries from chemicals, particles, and other hazards.",
+    "oshaRef": "1926.102(a)(1)",
+    "story": "A worker was splashed with a corrosive chemical and suffered severe eye injuries. The employer failed to provide eye protection, and the worker required hospitalization. The employer was fined $120,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential eye and face hazards and provide PPE",
+      "Use safety glasses or goggles with side shields when necessary",
+      "Ensure PPE is properly fitted and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of eye and face protection and provide guidance on selection and use.",
+    "talkingPoints": [
+      "What are the risks of eye and face injuries?",
+      "How can eye and face injuries be prevented?",
+      "What are some common eye and face protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of PPE is required for eye and face protection?",
+      "answer": "Safety glasses or goggles"
+    }
+  },
+  {
+    "title": "32. Hazard Communication - Labeling and Training",
+    "desc": "Develop and implement a hazard communication program to ensure safe handling and use of chemicals.",
+    "oshaRef": "1926.59(a)(1)",
+    "story": "A worker was exposed to a toxic chemical and suffered severe health effects. The employer failed to provide proper labeling and training, and the worker required hospitalization. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a hazard communication program and provide training",
+      "Label chemicals with proper identification and hazard warnings",
+      "Ensure chemical inventory and safety data sheets are up-to-date"
+    ],
+    "trainerNotes": "Emphasize the importance of a hazard communication program and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of chemical exposure?",
+      "How can chemical exposure be prevented?",
+      "What are the requirements for a hazard communication program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a hazard communication program?",
+      "answer": "To ensure safe handling and use of chemicals"
+    }
+  },
+  {
+    "title": "33. Scaffolding Safety - Inspections and Use",
+    "desc": "Regularly inspect and use scaffolding safely to prevent falls and injuries.",
+    "oshaRef": "1926.451(b)(1)",
+    "story": "A worker fell from scaffolding while working on a construction site. The scaffolding was not inspected before use, and the worker suffered severe injuries. The employer was fined $100,000 for violating OSHA regulations.",
+    "checklist": [
+      "Inspect scaffolding for damage and wear before use",
+      "Ensure scaffolding is properly assembled and secured",
+      "Use scaffolding levelers or stabilizers when necessary"
+    ],
+    "trainerNotes": "Discuss the importance of scaffolding inspections and proper use.",
+    "talkingPoints": [
+      "What are the risks of scaffolding use?",
+      "How can scaffolding use be made safer?",
+      "What are some common scaffolding safety hazards?"
+    ],
+    "quiz": {
+      "question": "How often should scaffolding be inspected?",
+      "answer": "Before each use"
+    }
+  },
+  {
+    "title": "34. Fire Extinguisher Safety - Inspection and Use",
+    "desc": "Regularly inspect and use fire extinguishers safely to prevent fires and injuries.",
+    "oshaRef": "1926.159(e)(1)",
+    "story": "A fire broke out on a construction site, and a worker was injured while trying to use a fire extinguisher. The employer failed to inspect the extinguisher before use, and the worker suffered severe burns. The employer was fined $120,000 for violating OSHA regulations.",
+    "checklist": [
+      "Inspect fire extinguishers for damage and wear before use",
+      "Ensure fire extinguishers are properly installed and maintained",
+      "Use fire extinguishers according to manufacturer instructions"
+    ],
+    "trainerNotes": "Discuss the importance of fire extinguisher inspections and proper use.",
+    "talkingPoints": [
+      "What are the risks of fire extinguisher use?",
+      "How can fire extinguisher use be made safer?",
+      "What are some common fire extinguisher safety hazards?"
+    ],
+    "quiz": {
+      "question": "How often should fire extinguishers be inspected?",
+      "answer": "Monthly"
+    }
+  },
+  {
+    "title": "35. Respiratory Protection - Fit Testing and Use",
+    "desc": "Provide and use respiratory protection to prevent inhalation of hazardous substances.",
+    "oshaRef": "1926.103(a)(1)",
+    "story": "A worker was exposed to a hazardous substance and suffered severe respiratory problems. The employer failed to provide fit testing and proper use of respiratory protection, and the worker required hospitalization. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential respiratory hazards and provide PPE",
+      "Conduct fit testing for respirators before use",
+      "Ensure respirators are properly maintained and stored"
+    ],
+    "trainerNotes": "Discuss the importance of respiratory protection and provide guidance on selection and use.",
+    "talkingPoints": [
+      "What are the risks of respiratory exposure?",
+      "How can respiratory exposure be prevented?",
+      "What are some common respiratory protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of PPE is required for respiratory protection?",
+      "answer": "Respirators"
+    }
+  },
+  {
+    "title": "36. Crane and Hoist Safety - Inspections and Use",
+    "desc": "Regularly inspect and use cranes and hoists safely to prevent accidents and injuries.",
+    "oshaRef": "1926.550(b)(1)",
+    "story": "A worker was injured when a crane collapsed on a construction site. The employer failed to inspect the crane before use, and the worker suffered severe injuries. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Inspect cranes and hoists for damage and wear before use",
+      "Ensure cranes and hoists are properly assembled and secured",
+      "Use cranes and hoists according to manufacturer instructions"
+    ],
+    "trainerNotes": "Discuss the importance of crane and hoist inspections and proper use.",
+    "talkingPoints": [
+      "What are the risks of crane and hoist use?",
+      "How can crane and hoist use be made safer?",
+      "What are some common crane and hoist safety hazards?"
+    ],
+    "quiz": {
+      "question": "How often should cranes and hoists be inspected?",
+      "answer": "Before each use"
+    }
+  },
+  {
+    "title": "37. Lockout/Tagout - Electrical and Mechanical Systems",
+    "desc": "Develop and implement a lockout/tagout program to prevent accidents and injuries from electrical and mechanical systems.",
+    "oshaRef": "1926.417(a)(1)",
+    "story": "A worker was injured when an electrical system was not properly locked out before maintenance. The employer failed to develop a lockout/tagout program, and the worker suffered severe electrical shock. The employer was fined $120,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a lockout/tagout program and provide training",
+      "Lock out electrical and mechanical systems before maintenance",
+      "Verify systems are properly secured and tagged"
+    ],
+    "trainerNotes": "Emphasize the importance of a lockout/tagout program and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of electrical and mechanical system accidents?",
+      "How can electrical and mechanical system accidents be prevented?",
+      "What are the requirements for a lockout/tagout program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a lockout/tagout program?",
+      "answer": "To prevent accidents and injuries from electrical and mechanical systems"
+    }
+  },
+  {
+    "title": "38. Fall Protection - Fall Arrest Systems",
+    "desc": "Implement fall arrest systems to prevent falls and injuries from heights.",
+    "oshaRef": "1926.502(d)(15)",
+    "story": "A worker fell 20 feet while working on a roof and was injured. The employer failed to implement a fall arrest system, and the worker suffered severe injuries. The employer was fined $100,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential fall hazards and implement fall arrest systems",
+      "Use fall arrest systems in accordance with manufacturer instructions",
+      "Ensure fall arrest systems are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of fall arrest systems and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of falls from heights?",
+      "How can falls from heights be prevented?",
+      "What are some common fall protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of fall protection is required for heights over 6 feet?",
+      "answer": "Fall arrest systems"
+    }
+  },
+  {
+    "title": "39. Hazardous Materials - Storage and Handling",
+    "desc": "Develop and implement a hazardous materials program to ensure safe storage and handling.",
+    "oshaRef": "1926.61(a)(1)",
+    "story": "A worker was exposed to a hazardous material and suffered severe health effects. The employer failed to develop a hazardous materials program, and the worker required hospitalization. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a hazardous materials program and provide training",
+      "Store hazardous materials in a designated area",
+      "Ensure hazardous materials are properly labeled and handled"
+    ],
+    "trainerNotes": "Emphasize the importance of a hazardous materials program and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of hazardous material exposure?",
+      "How can hazardous material exposure be prevented?",
+      "What are the requirements for a hazardous materials program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a hazardous materials program?",
+      "answer": "To ensure safe storage and handling of hazardous materials"
+    }
+  },
+  {
+    "title": "40. Excavation Safety - Shoring and Support",
+    "desc": "Implement shoring and support systems to prevent collapse and injuries from excavation sites.",
+    "oshaRef": "1926.651(b)(1)",
+    "story": "A worker was buried in an excavation site and suffered severe injuries. The employer failed to implement shoring and support systems, and the worker required hospitalization. The employer was fined $120,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential excavation hazards and implement shoring and support systems",
+      "Use shoring and support systems in accordance with manufacturer instructions",
+      "Ensure shoring and support systems are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of shoring and support systems and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of excavation site collapse?",
+      "How can excavation site collapse be prevented?",
+      "What are some common excavation safety measures?"
+    ],
+    "quiz": {
+      "question": "What type of support is required for excavation sites over 5 feet deep?",
+      "answer": "Shoring"
+    }
+  },
+  {
+    "title": "41. Confined Space Entry - Atmospheric Testing",
+    "desc": "Conduct atmospheric testing to ensure safe entry and exit of confined spaces.",
+    "oshaRef": "1926.120(b)(1)",
+    "story": "A worker entered a confined space without atmospheric testing and was overcome by toxic fumes. The employer failed to conduct atmospheric testing, and the worker suffered severe health effects. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Conduct atmospheric testing before confined space entry",
+      "Use a calibrated instrument to measure atmospheric conditions",
+      "Ensure atmospheric testing is conducted by a trained professional"
+    ],
+    "trainerNotes": "Discuss the importance of atmospheric testing and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of confined space entry without atmospheric testing?",
+      "How can confined space entry be made safer?",
+      "What are some common atmospheric testing methods?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of atmospheric testing?",
+      "answer": "To ensure safe entry and exit of confined spaces"
+    }
+  },
+  {
+    "title": "42. Scaffolding Safety - Fall Protection",
+    "desc": "Implement fall protection measures to prevent falls and injuries from scaffolding.",
+    "oshaRef": "1926.451(b)(1)",
+    "story": "A worker fell from scaffolding while working on a construction site. The employer failed to implement fall protection measures, and the worker suffered severe injuries. The employer was fined $100,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential fall hazards and implement fall protection measures",
+      "Use fall protection systems in accordance with manufacturer instructions",
+      "Ensure fall protection systems are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of fall protection measures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of falls from scaffolding?",
+      "How can falls from scaffolding be prevented?",
+      "What are some common fall protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of fall protection is required for scaffolding over 6 feet high?",
+      "answer": "Fall protection systems"
+    }
+  },
+  {
+    "title": "43. Electrical Safety - Lockout/Tagout",
+    "desc": "Implement lockout/tagout procedures to prevent electrical shock and injuries.",
+    "oshaRef": "1926.404(g)(1)",
+    "story": "A worker was electrocuted while working on a live electrical system. The employer failed to implement lockout/tagout procedures, and the worker suffered severe electrical shock. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential electrical hazards and implement lockout/tagout procedures",
+      "Use lockout/tagout devices in accordance with manufacturer instructions",
+      "Ensure lockout/tagout devices are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of lockout/tagout procedures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of electrical shock?",
+      "How can electrical shock be prevented?",
+      "What are some common lockout/tagout procedures?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of lockout/tagout procedures?",
+      "answer": "To prevent electrical shock and injuries"
+    }
+  },
+  {
+    "title": "44. Confined Space Entry - Emergency Procedures",
+    "desc": "Develop and implement emergency procedures to ensure safe response to confined space emergencies.",
+    "oshaRef": "1926.120(b)(1)",
+    "story": "A worker was injured in a confined space emergency and required hospitalization. The employer failed to develop emergency procedures, and the worker suffered severe health effects. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop emergency procedures for confined space entry",
+      "Train workers on emergency procedures",
+      "Ensure emergency equipment is properly maintained and accessible"
+    ],
+    "trainerNotes": "Emphasize the importance of emergency procedures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of confined space emergencies?",
+      "How can confined space emergencies be prevented?",
+      "What are some common emergency procedures?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of emergency procedures?",
+      "answer": "To ensure safe response to confined space emergencies"
+    }
+  },
+  {
+    "title": "45. Personal Protective Equipment (PPE) - Head Protection",
+    "desc": "Provide and use head protection to prevent injuries from falling objects and electrical hazards.",
+    "oshaRef": "1926.100(a)(1)",
+    "story": "A worker was struck by a falling object and suffered severe head injuries. The employer failed to provide head protection, and the worker required hospitalization. The employer was fined $120,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential head hazards and provide PPE",
+      "Use safety helmets or hard hats in accordance with manufacturer instructions",
+      "Ensure PPE is properly fitted and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of head protection and provide guidance on selection and use.",
+    "talkingPoints": [
+      "What are the risks of head injuries?",
+      "How can head injuries be prevented?",
+      "What are some common head protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of PPE is required for head protection?",
+      "answer": "Safety helmets or hard hats"
+    }
+  },
+  {
+    "title": "46. Hazardous Materials - Transportation and Storage",
+    "desc": "Develop and implement a hazardous materials transportation and storage program to ensure safe handling and use.",
+    "oshaRef": "1926.61(a)(1)",
+    "story": "A worker was exposed to a hazardous material during transportation and suffered severe health effects. The employer failed to develop a transportation and storage program, and the worker required hospitalization. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a hazardous materials transportation and storage program and provide training",
+      "Use proper labeling and packaging for hazardous materials",
+      "Ensure hazardous materials are properly stored and secured"
+    ],
+    "trainerNotes": "Emphasize the importance of a hazardous materials transportation and storage program and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of hazardous material exposure during transportation and storage?",
+      "How can hazardous material exposure be prevented?",
+      "What are the requirements for a hazardous materials transportation and storage program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a hazardous materials transportation and storage program?",
+      "answer": "To ensure safe handling and use of hazardous materials"
+    }
+  },
+  {
+    "title": "47. Electrical Safety - Grounding and Bonding",
+    "desc": "Implement grounding and bonding procedures to prevent electrical shock and injuries.",
+    "oshaRef": "1926.404(g)(1)",
+    "story": "A worker was electrocuted while working on a live electrical system. The employer failed to implement grounding and bonding procedures, and the worker suffered severe electrical shock. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential electrical hazards and implement grounding and bonding procedures",
+      "Use grounding and bonding devices in accordance with manufacturer instructions",
+      "Ensure grounding and bonding devices are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of grounding and bonding procedures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of electrical shock?",
+      "How can electrical shock be prevented?",
+      "What are some common grounding and bonding procedures?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of grounding and bonding procedures?",
+      "answer": "To prevent electrical shock and injuries"
+    }
+  },
+  {
+    "title": "48. Confined Space Entry - Ventilation and Monitoring",
+    "desc": "Conduct ventilation and monitoring to ensure safe entry and exit of confined spaces.",
+    "oshaRef": "1926.120(b)(1)",
+    "story": "A worker entered a confined space without ventilation and was overcome by toxic fumes. The employer failed to conduct ventilation and monitoring, and the worker suffered severe health effects. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Conduct ventilation and monitoring before confined space entry",
+      "Use calibrated instruments to measure atmospheric conditions",
+      "Ensure ventilation and monitoring are conducted by a trained professional"
+    ],
+    "trainerNotes": "Discuss the importance of ventilation and monitoring and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of confined space entry without ventilation and monitoring?",
+      "How can confined space entry be made safer?",
+      "What are some common ventilation and monitoring methods?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of ventilation and monitoring?",
+      "answer": "To ensure safe entry and exit of confined spaces"
+    }
+  },
+  {
+    "title": "49. Scaffolding Safety - Fall Protection and Guardrails",
+    "desc": "Implement fall protection and guardrails to prevent falls and injuries from scaffolding.",
+    "oshaRef": "1926.451(b)(1)",
+    "story": "A worker fell from scaffolding while working on a construction site. The employer failed to implement fall protection and guardrails, and the worker suffered severe injuries. The employer was fined $100,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential fall hazards and implement fall protection and guardrails",
+      "Use fall protection systems and guardrails in accordance with manufacturer instructions",
+      "Ensure fall protection systems and guardrails are properly inspected and maintained"
+    ],
+    "trainerNotes": "Discuss the importance of fall protection and guardrails and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of falls from scaffolding?",
+      "How can falls from scaffolding be prevented?",
+      "What are some common fall protection and guardrail measures?"
+    ],
+    "quiz": {
+      "question": "What type of fall protection is required for scaffolding over 6 feet high?",
+      "answer": "Fall protection systems and guardrails"
+    }
+  },
+  {
+    "title": "50. Electrical Safety - Arc Flash Protection",
+    "desc": "Implement arc flash protection measures to prevent electrical shock and burns.",
+    "oshaRef": "1926.404(g)(1)",
+    "story": "A worker was electrocuted while working on a live electrical system. The employer failed to implement arc flash protection measures, and the worker suffered severe electrical shock and burns. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Identify potential arc flash hazards and implement protection measures",
+      "Use arc-rated personal protective equipment (PPE) when working on live electrical systems",
+      "Ensure electrical systems are de-energized before maintenance"
+    ],
+    "trainerNotes": "Discuss the importance of arc flash protection measures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of arc flash?",
+      "How can arc flash be prevented?",
+      "What are some common arc flash protection measures?"
+    ],
+    "quiz": {
+      "question": "What type of PPE is required for arc flash protection?",
+      "answer": "Arc-rated PPE"
+    }
+  },
+  {
+    "title": "51. Confined Space Entry - Rescue Procedures",
+    "desc": "Develop and implement rescue procedures to ensure safe response to confined space emergencies.",
+    "oshaRef": "1926.120(b)(1)",
+    "story": "A worker was injured in a confined space emergency and required hospitalization. The employer failed to develop rescue procedures, and the worker suffered severe health effects. The employer was fined $150,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop rescue procedures for confined space entry",
+      "Train workers on rescue procedures",
+      "Ensure rescue equipment is properly maintained and accessible"
+    ],
+    "trainerNotes": "Emphasize the importance of rescue procedures and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of confined space emergencies?",
+      "How can confined space emergencies be prevented?",
+      "What are some common rescue procedures?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of rescue procedures?",
+      "answer": "To ensure safe response to confined space emergencies"
+    }
+  },
+  {
+    "title": "52. Hazardous Materials - Disposal and Storage",
+    "desc": "Develop and implement a hazardous materials disposal and storage program to ensure safe handling and use.",
+    "oshaRef": "1926.61(a)(1)",
+    "story": "A worker was exposed to a hazardous material during disposal and suffered severe health effects. The employer failed to develop a disposal and storage program, and the worker required hospitalization. The employer was fined $180,000 for violating OSHA regulations.",
+    "checklist": [
+      "Develop a hazardous materials disposal and storage program and provide training",
+      "Use proper labeling and packaging for hazardous materials",
+      "Ensure hazardous materials are properly stored and secured"
+    ],
+    "trainerNotes": "Emphasize the importance of a hazardous materials disposal and storage program and provide guidance on implementation.",
+    "talkingPoints": [
+      "What are the risks of hazardous material exposure during disposal and storage?",
+      "How can hazardous material exposure be prevented?",
+      "What are the requirements for a hazardous materials disposal and storage program?"
+    ],
+    "quiz": {
+      "question": "What is the purpose of a hazardous materials disposal and storage program?",
+      "answer": "To ensure safe handling and use of hazardous materials"
+    }
+  }
+]
