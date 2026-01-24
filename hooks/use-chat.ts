@@ -99,7 +99,7 @@ export function useChat() {
                 sender: 'assistant',
                 timestamp: Date.now(),
                 metadata: {
-                    actions: response.actions,
+                    actions: response.actions as any,
                     suggestions: response.suggestions,
                 }
             };

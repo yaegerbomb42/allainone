@@ -120,6 +120,7 @@ npm run lint
 - All new types exported correctly
 
 ### [ ] Task 2.2: Replace any types in firestore.ts
+<!-- chat-id: e034f859-1700-47f5-9c45-7d1111574730 -->
 **Location**: `lib/firestore.ts:213, 219, 229`
 **Description**: Replace `any` with proper types (AppSettings, Achievement, etc.)
 **Verification**: 

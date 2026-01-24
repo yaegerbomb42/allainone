@@ -9,6 +9,7 @@ import { promptsService, executeActionPlan } from "@/lib/firestore";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatTime } from "@/lib/utils";
 import { CheckCircle2, XCircle, Clock } from "lucide-react";
+import { Timestamp } from "firebase/firestore";
 
 export default function InboxPage() {
   const { user } = useAuth();
@@ -63,7 +64,7 @@ export default function InboxPage() {
       await promptsService.update(user.uid, promptId, {
         createdItemIds,
         status: "confirmed",
-        processedAt: new Date(),
+        processedAt: Timestamp.now(),
       });
 
       // Reload prompts
