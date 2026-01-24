@@ -73,7 +73,8 @@ Save to `{@artifacts_path}/plan.md`.
 - ESLint warning resolved
 - Habit heatmap renders correctly
 
-### [ ] Task 1.3: Replace img tag with Next.js Image in message-input.tsx
+### [x] Task 1.3: Replace img tag with Next.js Image in message-input.tsx
+<!-- chat-id: eb80893b-6dbf-48bf-97dd-859637b70686 -->
 **Location**: `components/chat/message-input.tsx:97`
 **Description**: Replace `<img>` with Next.js `<Image />` component for optimization
 **Verification**: 
