@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/lib/auth-context";
+import { useAuth } from "@/context/AuthContext";
 import { AppNavigation } from "@/components/app-navigation";
 import { AInimaMascot } from "@/components/ainima-mascot";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ export default function AppLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { user, loading, signOut } = useAuth();
+  const { user, loading, logout } = useAuth();
   const router = useRouter();
   const [theme, setTheme] = React.useState<"light" | "dark">("light");
 
@@ -37,7 +38,7 @@ export default function AppLayout({
   };
 
   const handleSignOut = async () => {
-    await signOut();
+    await logout();
     router.push("/login");
   };
 
@@ -61,14 +62,14 @@ export default function AppLayout({
       {/* Sidebar */}
       <aside className="fixed left-0 top-0 bottom-0 w-64 border-r bg-card flex flex-col">
         {/* Logo/Brand */}
-        <div className="p-6 border-b">
+        <Link href="/" className="p-6 border-b hover:bg-accent/50 transition-colors block">
           <h1 className="text-2xl font-bold">
             ALL<span className="text-purple-600 dark:text-purple-400">AI</span>nOne
           </h1>
           <p className="text-xs text-muted-foreground mt-1">
             Your AI Life Assistant
           </p>
-        </div>
+        </Link>
 
         {/* Navigation */}
         <div className="flex-1 overflow-y-auto px-3">
