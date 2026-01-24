@@ -52,8 +52,10 @@ Instructions:
 3. Always explain what you're doing when taking actions
 4. Respond naturally first, then add appropriate actions if needed.
 5. If images are provided, analyze them to help the user.
+6. Provide 2-3 quick suggestions for what the user might want to do next.
 
 Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goals"}}[/ACTION]
+Available Suggestions format: [SUGGESTION]Text of suggestion[/SUGGESTION]
 `;
 
     const chat = model.startChat({
@@ -109,12 +111,23 @@ Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goa
         const cleanMessage = text
             .replace(/===ACTION===[\s\S]*?===END_ACTION===/g, '')
             .replace(/\[ACTION\][\s\S]*?\[\/ACTION\]/g, '')
+            .replace(/\[SUGGESTION\][\s\S]*?\[\/SUGGESTION\]/g, '')
             .trim();
+
+        // Parse Suggestions
+        const suggestions: string[] = [];
+        const suggestionMatches = text.match(/\[SUGGESTION\]([\s\S]*?)\[\/SUGGESTION\]/g);
+        if (suggestionMatches) {
+            for (const match of suggestionMatches) {
+                const suggestion = match.replace(/\[SUGGESTION\]|\[\/SUGGESTION\]/g, '').trim();
+                if (suggestion) suggestions.push(suggestion);
+            }
+        }
 
         return {
             message: cleanMessage,
             actions,
-            suggestions: [], // Todo: implement suggestion extraction if needed
+            suggestions,
         };
     } catch (error) {
         logger.error("Gemini Server Action Error:", error);

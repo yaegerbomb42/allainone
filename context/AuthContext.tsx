@@ -100,10 +100,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const logout = async () => {
-        await signOut(auth);
-        // TODO: Cleanup services
-        // integrationService.cleanup();
-        setUser(null);
+        try {
+            await signOut(auth);
+            // Cleanup local data
+            localStorage.removeItem('justgoals-settings');
+            localStorage.removeItem('drift-welcome-seen');
+            setUser(null);
+            logger.info("User logged out successfully");
+        } catch (error) {
+            logger.error("Logout failed:", error);
+        }
     };
 
     const handleGoogleSignIn = async () => {

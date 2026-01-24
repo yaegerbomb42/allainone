@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Circle, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface ItemsListProps {
   type: ItemType;
@@ -68,7 +69,25 @@ export function ItemsList({ type, title, description, emptyMessage }: ItemsListP
   if (loading) {
     return (
       <div className="p-8 max-w-4xl mx-auto">
-        <div className="text-center py-12">Loading...</div>
+        <div className="mb-8">
+          <Skeleton className="h-10 w-48 mb-2" />
+          <Skeleton className="h-5 w-64" />
+        </div>
+        <div className="space-y-3">
+          {[1, 2, 3].map((i) => (
+            <Card key={i}>
+              <CardContent className="py-4">
+                <div className="flex items-start gap-3">
+                  <Skeleton className="h-5 w-5 rounded-full mt-0.5" />
+                  <div className="flex-1">
+                    <Skeleton className="h-5 w-3/4 mb-2" />
+                    <Skeleton className="h-4 w-1/2" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     );
   }

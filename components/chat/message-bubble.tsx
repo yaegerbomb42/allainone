@@ -21,6 +21,12 @@ const MessageBubble = ({ message, isProcessing = false, onActionComplete }: Mess
     const [initialUIData, setInitialUIData] = useState<any>({});
 
     const handleUIAction = (action: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
+        if (action.type === 'suggestion') {
+            if (onActionComplete) {
+                onActionComplete('send_message', action.data.text);
+            }
+            return;
+        }
         setActiveUIType(action.type);
         setInitialUIData(action.data || {});
         setShowInteractiveUI(true);
