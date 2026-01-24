@@ -3,9 +3,9 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { auth, googleProvider } from '@/lib/firebase';
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, signInWithPopup, User } from 'firebase/auth';
+import { userService } from '@/lib/firestore';
 
 // TODO: Port these services
-// import firestoreService from '../services/firestoreService';
 // import integrationService from '../services/integrationService';
 // import dailyActivityService from '../services/dailyActivityService';
 
@@ -67,16 +67,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         await signInWithEmailAndPassword(auth, email, password);
         // User update handled by onAuthStateChanged
 
-        // TODO: Port user initialization
-        /*
         const user = auth.currentUser;
         if (user) {
-          const userDoc = await firestoreService.getUserDoc(user.uid);
+          const userDoc = await userService.getUserDoc(user.uid);
           if (!userDoc) {
-            await firestoreService.initializeUserData(user.uid);
+            await userService.initializeUserData(
+              user.uid, 
+              user.email || email,
+              user.displayName || undefined
+            );
           }
         }
-        */
     };
 
     const signup = async (email: string, password: string, name?: string) => {
@@ -86,12 +87,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             await userCredential.user.updateProfile({ displayName: name });
         }
 
-        // TODO: Port user initialization
-        /*
         if (userCredential.user) {
-          await firestoreService.initializeUserData(userCredential.user.uid);
+          await userService.initializeUserData(
+            userCredential.user.uid,
+            userCredential.user.email || email,
+            name || userCredential.user.displayName || undefined
+          );
         }
-        */
     };
 
     const logout = async () => {
@@ -102,7 +104,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const handleGoogleSignIn = async () => {
-        await signInWithPopup(auth, googleProvider);
+        const result = await signInWithPopup(auth, googleProvider);
+        
+        if (result.user) {
+          const userDoc = await userService.getUserDoc(result.user.uid);
+          if (!userDoc) {
+            await userService.initializeUserData(
+              result.user.uid,
+              result.user.email || '',
+              result.user.displayName || undefined
+            );
+          }
+        }
     };
 
     const value = {

@@ -81,7 +81,8 @@ Save to `{@artifacts_path}/plan.md`.
 - ESLint warning resolved
 - Image attachments display correctly
 
-### [ ] Task 1.4: Implement user initialization in AuthContext
+### [x] Task 1.4: Implement user initialization in AuthContext
+<!-- chat-id: b24ca541-981b-449d-93f0-7011f3e504d4 -->
 **Location**: `context/AuthContext.tsx:70, 89`
 **Description**: Create Firestore user document on signup/login, initialize settings
 **Dependencies**: Requires user service in firestore.ts
@@ -90,7 +91,7 @@ Save to `{@artifacts_path}/plan.md`.
 - Default settings initialized
 - Test signup and Google sign-in flows
 
-### [ ] Task 1.5: Add user service methods to firestore.ts
+### [x] Task 1.5: Add user service methods to firestore.ts
 **Location**: `lib/firestore.ts`
 **Description**: Add userService with initializeUser and getUserDoc methods
 **Verification**: 
