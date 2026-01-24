@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { itemsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Target, CheckCircle2 } from "lucide-react";
 
@@ -28,7 +29,7 @@ export default function ProgressPage() {
         completedTodos: todos.filter((t) => t.status === "completed").length,
       });
     } catch (error) {
-      console.error("Failed to load stats:", error);
+      logger.error("Failed to load stats:", error);
     }
   }, [user]);
 

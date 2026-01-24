@@ -2,18 +2,20 @@
 
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { auth, googleProvider } from '@/lib/firebase';
-import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, signInWithPopup, User } from 'firebase/auth';
+import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, signInWithPopup } from 'firebase/auth';
 import { userService } from '@/lib/firestore';
+import { User, LoginCredentials } from '@/lib/types';
+import logger from '@/lib/services/logger';
 
 // TODO: Port these services
 // import integrationService from '../services/integrationService';
 // import dailyActivityService from '../services/dailyActivityService';
 
 interface AuthContextType {
-    user: any | null; // Using any for now to match refined user object structure
+    user: User | null;
     isAuthenticated: boolean;
     loading: boolean;
-    login: (credentials: any) => Promise<void>;
+    login: (credentials: LoginCredentials) => Promise<void>;
     logout: () => Promise<void>;
     signup: (email: string, password: string, name?: string) => Promise<void>;
     handleGoogleSignIn: () => Promise<void>;
@@ -23,14 +25,14 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-    const [user, setUser] = useState<any | null>(null);
+    const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
             if (firebaseUser) {
                 // Use Firebase Auth user with full metadata
-                const userData = {
+                const userData: User = {
                     id: firebaseUser.uid,
                     uid: firebaseUser.uid,
                     email: firebaseUser.email,
@@ -40,7 +42,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                     photoURL: firebaseUser.photoURL,
                     isGoogleUser: firebaseUser.providerData.some(p => p.providerId === 'google.com'),
                     metadata: firebaseUser.metadata,
-                    providerData: firebaseUser.providerData,
+                    providerData: firebaseUser.providerData as any[],
                 };
                 setUser(userData);
 
@@ -50,9 +52,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 // TODO: Port robust sync
                 /*
                 if (userData && userData.id) {
-                  firestoreService.robustSyncUserData(userData.id)
-                    .then(() => console.log('Robust user data sync complete'))
-                    .catch(error => console.error('Robust user data sync failed:', error));
+                  userService.robustSyncUserData(userData.id)
+                    .then(() => logger.info('Robust user data sync complete'))
+                    .catch(error => logger.error('Robust user data sync failed:', error));
                 }
                 */
             } else {
@@ -63,7 +65,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         return () => unsubscribe();
     }, []);
 
-    const login = async ({ email, password }: any) => {
+    const login = async ({ email, password }: LoginCredentials) => {
+        if (!password) throw new Error("Password is required for email login");
         await signInWithEmailAndPassword(auth, email, password);
         // User update handled by onAuthStateChanged
 

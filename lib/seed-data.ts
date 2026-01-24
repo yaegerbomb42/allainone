@@ -197,7 +197,7 @@ export const generateSeedData = (): SeedData => {
         },
         createdItemIds: ["item-123"],
         status: "confirmed",
-        processedAt: new Date(),
+        processedAt: Timestamp.now(),
       },
       {
         rawPrompt: "Create a goal to learn TypeScript",
@@ -217,7 +217,7 @@ export const generateSeedData = (): SeedData => {
         },
         createdItemIds: ["item-456"],
         status: "confirmed",
-        processedAt: new Date(),
+        processedAt: Timestamp.now(),
       },
     ],
   };

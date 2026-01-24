@@ -6,6 +6,7 @@ import { PromptBar } from "@/components/prompt-bar";
 import { ActionPlanReview } from "@/components/action-plan-review";
 import { ActionPlan, Prompt } from "@/lib/types";
 import { promptsService, executeActionPlan } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatTime } from "@/lib/utils";
 import { CheckCircle2, XCircle, Clock } from "lucide-react";
@@ -26,7 +27,7 @@ export default function InboxPage() {
       const prompts = await promptsService.list(user.uid, 10);
       setRecentPrompts(prompts);
     } catch (error) {
-      console.error("Failed to load prompts:", error);
+      logger.error("Failed to load prompts:", error);
     }
   }, [user]);
 
@@ -72,7 +73,7 @@ export default function InboxPage() {
       
       setPendingPlan(null);
     } catch (error) {
-      console.error("Failed to execute plan:", error);
+      logger.error("Failed to execute plan:", error);
     } finally {
       setLoading(false);
     }

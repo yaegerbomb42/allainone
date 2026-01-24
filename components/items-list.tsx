@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Item, ItemType, ItemStatus } from "@/lib/types";
 import { itemsService } from "@/lib/firestore";
 import { useAuth } from "@/lib/auth-context";
+import logger from "@/lib/services/logger";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Circle, Trash2 } from "lucide-react";
@@ -31,7 +32,7 @@ export function ItemsList({ type, title, description, emptyMessage }: ItemsListP
       });
       setItems(fetchedItems);
     } catch (error) {
-      console.error("Failed to load items:", error);
+      logger.error("Failed to load items:", error);
     } finally {
       setLoading(false);
     }
@@ -50,7 +51,7 @@ export function ItemsList({ type, title, description, emptyMessage }: ItemsListP
       await itemsService.update(user.uid, item.id, { status: newStatus });
       await loadItems();
     } catch (error) {
-      console.error("Failed to update item:", error);
+      logger.error("Failed to update item:", error);
     }
   };
 
@@ -60,7 +61,7 @@ export function ItemsList({ type, title, description, emptyMessage }: ItemsListP
       await itemsService.delete(user.uid, itemId);
       await loadItems();
     } catch (error) {
-      console.error("Failed to delete item:", error);
+      logger.error("Failed to delete item:", error);
     }
   };
 

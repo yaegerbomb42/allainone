@@ -1,5 +1,7 @@
 import { NOTIFICATION_PRIORITY, NOTIFICATION_TYPES } from '@/context/NotificationContext';
 
+import logger from '@/lib/services/logger';
+
 class InAppNotificationService {
     private notificationContext: any = null;
     private isInitialized: boolean = false;
@@ -75,7 +77,7 @@ class InAppNotificationService {
                     label: 'Test Action',
                     primary: true,
                     callback: () => {
-                        console.log('Test action clicked!');
+                        logger.info('Test action clicked!');
                     }
                 }
             ]

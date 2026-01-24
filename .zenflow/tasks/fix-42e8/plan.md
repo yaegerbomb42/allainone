@@ -128,6 +128,7 @@ npm run lint
 - All CRUD operations type-safe
 
 ### [ ] Task 2.3: Replace any types in actions.ts
+<!-- chat-id: b4417906-faeb-412a-98f2-d5501fb85016 -->
 **Location**: `app/actions.ts:7, 20, 107`
 **Description**: Add ActionData, AIContext, AIResponse interfaces. Replace `any` types
 **Verification**: 

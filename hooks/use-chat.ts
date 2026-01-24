@@ -6,6 +6,7 @@ import { useDriftCharacter } from '@/context/DriftCharacterContext';
 import { useNotificationContext } from '@/context/NotificationContext';
 import { Message } from '@/lib/types';
 import { generateAIResponse } from '@/app/actions';
+import logger from '@/lib/services/logger';
 
 export function useChat() {
     const { user } = useAuth();
@@ -107,7 +108,7 @@ export function useChat() {
             setMessages(prev => [...prev, aiMessage]);
             setMood('happy');
         } catch (error: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
-            console.error('Chat error:', error);
+            logger.error('Chat error:', error);
             showError(error.message || 'Failed to get response');
 
             const errorMessage: Message = {

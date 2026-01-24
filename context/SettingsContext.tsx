@@ -2,8 +2,9 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import { settingsService } from '@/lib/firestore';
-import { AppSettings } from '@/lib/types';
+import { AppSettings } from "@/lib/types";
+import { settingsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 
 interface SettingsContextType {
     settings: AppSettings;
@@ -61,7 +62,7 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
                     }
                 } catch (error) {
                     // Fallback to localStorage
-                    console.error("Failed to load settings from Firestore", error);
+                    logger.error("Failed to load settings from Firestore", error);
                 }
             }
         }
@@ -73,7 +74,7 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
             const newSettings = { ...prev, ...updates };
             localStorage.setItem('justgoals-settings', JSON.stringify(newSettings));
             if (isAuthenticated && user && user.id) {
-                settingsService.saveAppSettings(user.id, newSettings).catch(console.error);
+                settingsService.saveAppSettings(user.id, newSettings).catch(logger.error);
             }
             return newSettings;
         });
@@ -84,7 +85,7 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
             const updated = { ...prev, geminiApiKey: apiKey };
             localStorage.setItem('justgoals-settings', JSON.stringify(updated));
             if (isAuthenticated && user && user.id) {
-                settingsService.saveAppSettings(user.id, updated).catch(console.error);
+                settingsService.saveAppSettings(user.id, updated).catch(logger.error);
             }
             return updated;
         });

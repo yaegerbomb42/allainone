@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import inAppNotificationService from '@/services/inAppNotificationService';
+import { Achievement, Item } from '@/lib/types';
 
 interface DriftCharacterContextType {
     isChatOpen: boolean;
@@ -15,8 +16,8 @@ interface DriftCharacterContextType {
     setMood: (mood: string) => void;
     markAsUnread: () => void;
     showHelpfulTip: (tip: string) => void;
-    showAchievement: (achievement: any) => void;
-    showGoalReminder: (goal: any) => void;
+    showAchievement: (achievement: Achievement) => void;
+    showGoalReminder: (goal: Item) => void;
 }
 
 const DriftCharacterContext = createContext<DriftCharacterContextType | null>(null);
@@ -119,16 +120,15 @@ export const DriftCharacterProvider = ({ children }: { children: React.ReactNode
         inAppNotificationService.showInfo(tip, { duration: 4000 });
     };
 
-    const showAchievement = (achievement: any) => {
+    const showAchievement = (achievement: Achievement) => {
         setCharacterMood('excited');
-        // TODO: fix typing
         inAppNotificationService.showSuccess(
             `🎉 ${achievement.title}! ${achievement.description}`,
             { duration: 5000 }
         );
     };
 
-    const showGoalReminder = (goal: any) => {
+    const showGoalReminder = (goal: Item) => {
         setCharacterMood('thinking');
         inAppNotificationService.showWarning(
             `📝 Don't forget about your goal: "${goal.title}"`,

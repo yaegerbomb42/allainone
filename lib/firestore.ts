@@ -16,6 +16,7 @@ import {
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Item, Event, Prompt, ItemType, ItemStatus, AppSettings, UserDocument } from "@/lib/types";
+import logger from "@/lib/services/logger";
 
 /**
  * Items CRUD operations
@@ -263,7 +264,7 @@ export const userService = {
 
   async robustSyncUserData(userId: string): Promise<void> {
     // Placeholder for advanced sync logic
-    console.log(`Syncing data for ${userId}`);
+    logger.info(`Syncing data for ${userId}`);
   }
 };
 

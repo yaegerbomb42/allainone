@@ -114,11 +114,20 @@ export interface Message {
 
 export interface User {
   id: string;
+  uid: string;
   name: string;
-  email?: string;
-  displayName?: string;
-  photoURL?: string;
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+  picture?: string;
   isGoogleUser?: boolean;
+  metadata?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  providerData?: any[]; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
+export interface LoginCredentials {
+  email: string;
+  password?: string;
 }
 
 export interface UserPreferences {

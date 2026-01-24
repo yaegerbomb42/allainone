@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { itemsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Circle, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -26,7 +27,7 @@ export default function TodayPage() {
       );
       setTodayItems(filtered);
     } catch (error) {
-      console.error("Failed to load items:", error);
+      logger.error("Failed to load items:", error);
     } finally {
       setLoading(false);
     }
@@ -45,7 +46,7 @@ export default function TodayPage() {
       await itemsService.update(user.uid, item.id, { status: newStatus });
       await loadTodayItems();
     } catch (error) {
-      console.error("Failed to update item:", error);
+      logger.error("Failed to update item:", error);
     }
   };
 
