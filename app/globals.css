@@ -78,14 +78,18 @@
 /* Custom Glass & Utilities */
 @layer utilities {
   .glass-card {
-    @apply bg-background/60 backdrop-blur-lg border border-border/50 shadow-xl;
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
   }
   
+  .glass-card-vibrant {
+    @apply bg-white/40 dark:bg-black/20 backdrop-blur-2xl border border-white/30 dark:border-white/10 shadow-2xl;
+  }
+
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500;
   }
   
   .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }

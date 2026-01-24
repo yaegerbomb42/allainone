@@ -2,7 +2,7 @@
 
 class GeminiService {
     private apiKey: string | null = null;
-    private modelName: string = 'gemini-2.0-flash'; // Or 'gemini-1.5-flash' depending on availability
+    private modelName: string = 'gemini-1.5-flash';
     private endpoint: string;
 
     constructor() {

@@ -106,6 +106,16 @@ Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goa
         };
     } catch (error: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
         console.error("Gemini Server Action Error:", error);
-        throw new Error(error.message || 'Failed to generate response');
+        
+        let errorMessage = 'Failed to generate response';
+        if (error.message?.includes('API_KEY_INVALID')) {
+            errorMessage = 'Invalid API key. Please check your settings.';
+        } else if (error.message?.includes('model not found') || error.message?.includes('404')) {
+            errorMessage = 'Model not found. Please ensure you have access to gemini-1.5-flash.';
+        } else if (error.message?.includes('SAFETY')) {
+            errorMessage = 'The response was blocked by safety filters.';
+        }
+        
+        throw new Error(errorMessage + ' (' + (error.message || 'Unknown error') + ')');
     }
 }

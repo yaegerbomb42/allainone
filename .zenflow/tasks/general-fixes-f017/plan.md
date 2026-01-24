@@ -18,7 +18,7 @@ Do not make assumptions on important decisions — get clarification first.
 
 ## Workflow Steps
 
-### [ ] Step: Technical Specification
+### [x] Step: Technical Specification
 
 Assess the task's difficulty, as underestimating it leads to poor outcomes.
 - easy: Straightforward implementation, trivial bug fix or feature
@@ -32,33 +32,36 @@ Create a technical specification for the task that is appropriate for the comple
 - Define any necessary data model, API, or interface changes.
 - Describe verification steps using the project's test and lint commands.
 
-Save the output to `{@artifacts_path}/spec.md` with:
+Save the output to `.zenflow/tasks/general-fixes-f017/spec.md` with:
 - Technical context (language, dependencies)
 - Implementation approach
 - Source code structure changes
 - Data model / API / interface changes
 - Verification approach
 
-If the task is complex enough, create a detailed implementation plan based on `{@artifacts_path}/spec.md`:
-- Break down the work into concrete tasks (incrementable, testable milestones)
-- Each task should reference relevant contracts and include verification steps
-- Replace the Implementation step below with the planned tasks
+### [x] Step: UI Refinement (Apple Glass & Navigation)
+- Update `globals.css` for "Apple Glass" aesthetic.
+- Fix Header: "AllInOne" as home link, Profile as clickable.
+- Update Habit icon in `app-navigation.tsx`.
 
-Rule of thumb for step size: each step should represent a coherent unit of work (e.g., implement a component, add an API endpoint, write tests for a module). Avoid steps that are too granular (single function).
+### [x] Step: Gemini & AI Fixes
+- Update `lib/services/gemini.ts` to `gemini-1.5-flash`.
+- Fix API key connectivity issue.
+- Verify AI initialization and responses.
 
-Save to `{@artifacts_path}/plan.md`. If the feature is trivial and doesn't warrant this breakdown, keep the Implementation step below as is.
+### [x] Step: Dashboard Widgets Implementation
+- Create `goals-widget.tsx`, `habits-widget.tsx`, `journal-widget.tsx`.
+- Implement data fetching for each widget from Firestore.
 
----
+### [x] Step: Smart AI Analytics & Suggestions
+- Implement `analytics-widget.tsx` and `smart-suggestions.tsx`.
+- Create logic for AI-driven insights based on user data.
 
-### [ ] Step: Implementation
+### [x] Step: Dashboard Assembly (Home Page Rework)
+- Rework `app/page.tsx` to include the new widgets.
+- Integrate Drift as a companion/assistant rather than the primary UI.
 
-Implement the task according to the technical specification and general engineering best practices.
-
-1. Break the task into steps where possible.
-2. Implement the required changes in the codebase.
-3. Add and run relevant tests and linters.
-4. Perform basic manual verification if applicable.
-5. After completion, write a report to `{@artifacts_path}/report.md` describing:
-   - What was implemented
-   - How the solution was tested
-   - The biggest issues or challenges encountered
+### [x] Step: Final Verification & Cleanup
+- Run linting and build checks.
+- Manual verification of all fixed features.
+- Write report.md.

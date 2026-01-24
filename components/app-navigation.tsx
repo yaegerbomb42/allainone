@@ -9,7 +9,7 @@ import {
   Calendar, 
   Target, 
   CheckSquare, 
-  Activity, 
+  RotateCcw, 
   Utensils, 
   TrendingUp, 
   BookOpen, 
@@ -39,7 +39,7 @@ const navigation = [
     section: "track",
     items: [
       { name: "Todos", href: "/todos", icon: CheckSquare },
-      { name: "Habits", href: "/habits", icon: Activity },
+      { name: "Habits", href: "/habits", icon: RotateCcw },
       { name: "Meals", href: "/meals", icon: Utensils },
     ],
   },
