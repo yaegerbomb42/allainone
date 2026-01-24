@@ -202,7 +202,6 @@ export async function executeActionPlan(
   }
 
   await batch.commit();
-  await batch.commit();
   return createdItemIds;
 }
 

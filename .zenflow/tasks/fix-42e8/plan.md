@@ -57,7 +57,8 @@ Save to `{@artifacts_path}/plan.md`.
 
 ### Phase 1: Critical Fixes (P0)
 
-### [ ] Task 1.1: Fix duplicate batch.commit() in firestore.ts
+### [x] Task 1.1: Fix duplicate batch.commit() in firestore.ts
+<!-- chat-id: b31da836-2bbb-4cda-adb5-c14c41dc07e2 -->
 **Location**: `lib/firestore.ts:204-205`
 **Description**: Remove the duplicate batch.commit() call that causes performance issues
 **Verification**: 
