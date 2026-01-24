@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Settings as SettingsIcon, User, Download, Moon, Sun } from "lucide-react";
 import { itemsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 
 export default function SettingsPage() {
   const { user, userProfile } = useAuth();
@@ -49,7 +50,7 @@ export default function SettingsPage() {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error("Failed to export data:", error);
+      logger.error("Failed to export data:", error);
       alert("Failed to export data. Please try again.");
     } finally {
       setExporting(false);

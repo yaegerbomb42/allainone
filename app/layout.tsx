@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/lib/auth-context";
+import { Providers } from "@/components/providers";
+import { NotificationInitializer } from "@/components/notification-initializer";
+import ErrorBoundary from "@/components/error-boundary";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ALLAInOne - Your AI-Powered Life Assistant",
@@ -14,10 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+      <body className={inter.className}>
+        <ErrorBoundary>
+          <Providers>
+            <NotificationInitializer />
+            {children}
+          </Providers>
+        </ErrorBoundary>
       </body>
     </html>
   );

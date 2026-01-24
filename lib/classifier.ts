@@ -1,5 +1,6 @@
 import { ActionPlanSchema } from "@/lib/schemas";
 import { ItemType, ActionPlan } from "@/lib/types";
+import logger from "@/lib/services/logger";
 import OpenAI from "openai";
 
 /**
@@ -364,7 +365,7 @@ Important:
     try {
       return ActionPlanSchema.parse(plan);
     } catch (error) {
-      console.error("Action plan validation failed:", error);
+      logger.error("Action plan validation failed:", error);
       return {
         actions: [],
         confidence: 0,
