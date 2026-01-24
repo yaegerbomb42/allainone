@@ -1,10 +1,12 @@
 'use server';
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { Item } from '@/lib/types';
+import logger from '@/lib/services/logger';
 
 interface ActionData {
     type: string;
-    data: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+    data: Record<string, unknown>;
 }
 
 interface AIResponse {
@@ -13,11 +15,21 @@ interface AIResponse {
     suggestions: string[];
 }
 
+interface AIContext {
+    user?: {
+        name?: string;
+    };
+    currentGoals?: Item[];
+    conversationHistory?: Array<{
+        role: string;
+        parts: Array<{ text: string }>;
+    }>;
+}
+
 export async function generateAIResponse(
     apiKey: string,
     userMessage: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    context: any,
+    context: AIContext,
     images: string[] = [] // Array of base64 strings
 ): Promise<AIResponse> {
     if (!apiKey) {
@@ -40,8 +52,10 @@ Instructions:
 3. Always explain what you're doing when taking actions
 4. Respond naturally first, then add appropriate actions if needed.
 5. If images are provided, analyze them to help the user.
+6. Provide 2-3 quick suggestions for what the user might want to do next.
 
 Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goals"}}[/ACTION]
+Available Suggestions format: [SUGGESTION]Text of suggestion[/SUGGESTION]
 `;
 
     const chat = model.startChat({
@@ -86,10 +100,10 @@ Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goa
             for (const match of actionMatches) {
                 try {
                     const jsonStr = match.replace(/\[ACTION\]|\[\/ACTION\]/g, '').trim();
-                    const actionData = JSON.parse(jsonStr);
+                    const actionData = JSON.parse(jsonStr) as ActionData;
                     actions.push(actionData);
                 } catch (e) {
-                    console.error("Failed to parse action json", e);
+                    logger.error("Failed to parse action json", e);
                 }
             }
         }
@@ -97,12 +111,23 @@ Available Actions format: [ACTION]{"type": "navigate_to", "data": {"path": "/goa
         const cleanMessage = text
             .replace(/===ACTION===[\s\S]*?===END_ACTION===/g, '')
             .replace(/\[ACTION\][\s\S]*?\[\/ACTION\]/g, '')
+            .replace(/\[SUGGESTION\][\s\S]*?\[\/SUGGESTION\]/g, '')
             .trim();
+
+        // Parse Suggestions
+        const suggestions: string[] = [];
+        const suggestionMatches = text.match(/\[SUGGESTION\]([\s\S]*?)\[\/SUGGESTION\]/g);
+        if (suggestionMatches) {
+            for (const match of suggestionMatches) {
+                const suggestion = match.replace(/\[SUGGESTION\]|\[\/SUGGESTION\]/g, '').trim();
+                if (suggestion) suggestions.push(suggestion);
+            }
+        }
 
         return {
             message: cleanMessage,
             actions,
-            suggestions: [], // Todo: implement suggestion extraction if needed
+            suggestions,
         };
     } catch (error: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
         console.error("Gemini Server Action Error:", error);

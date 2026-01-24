@@ -3,11 +3,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { itemsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { TrendingUp, Target, CheckCircle2 } from "lucide-react";
 
 export default function ProgressPage() {
   const { user } = useAuth();
+  const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({
     totalGoals: 0,
     completedGoals: 0,
@@ -17,6 +20,7 @@ export default function ProgressPage() {
 
   const loadStats = useCallback(async () => {
     if (!user) return;
+    setLoading(true);
     try {
       const goals = await itemsService.list(user.uid, { type: "goal" });
       const todos = await itemsService.list(user.uid, { type: "todo" });
@@ -28,7 +32,9 @@ export default function ProgressPage() {
         completedTodos: todos.filter((t) => t.status === "completed").length,
       });
     } catch (error) {
-      console.error("Failed to load stats:", error);
+      logger.error("Failed to load stats:", error);
+    } finally {
+      setLoading(false);
     }
   }, [user]);
 
@@ -37,6 +43,24 @@ export default function ProgressPage() {
       loadStats();
     }
   }, [user, loadStats]);
+
+  if (loading) {
+    return (
+      <div className="p-8 max-w-4xl mx-auto">
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-2">
+            <Skeleton className="w-8 h-8 rounded-lg" />
+            <Skeleton className="h-8 w-32" />
+          </div>
+          <Skeleton className="h-5 w-48" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Skeleton className="h-48 w-full rounded-xl" />
+          <Skeleton className="h-48 w-full rounded-xl" />
+        </div>
+      </div>
+    );
+  }
 
   const goalProgress = stats.totalGoals > 0
     ? Math.round((stats.completedGoals / stats.totalGoals) * 100)

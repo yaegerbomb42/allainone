@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import Icon from '@/components/ui/icon';
 import VoiceInput from './voice-input';
 
@@ -93,8 +94,8 @@ const MessageInput = ({
                                     animate={{ opacity: 1, scale: 1 }}
                                     className="relative flex-shrink-0"
                                 >
-                                    <div className="w-16 h-16 rounded-lg overflow-hidden border border-border/50">
-                                        <img src={src} alt="Attachment" className="w-full h-full object-cover" />
+                                    <div className="w-16 h-16 rounded-lg overflow-hidden border border-border/50 relative">
+                                        <Image src={src} alt="Attachment" fill className="object-cover" />
                                     </div>
                                     <button
                                         type="button"

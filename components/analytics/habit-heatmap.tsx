@@ -43,7 +43,7 @@ export function HabitHeatmap({ data = generateMockData() }: HabitHeatmapProps) {
                     {/* We map mock data into a grid. For a real calendar view, we'd group by week.
                 Here, simply flowing them for visual effect as a 'contribution graph' style. 
             */}
-                    {data.slice(0, 365).map((day, _index) => (
+                    {data.slice(0, 365).map((day) => (
                         <TooltipProvider key={day.date}>
                             <Tooltip>
                                 <TooltipTrigger>

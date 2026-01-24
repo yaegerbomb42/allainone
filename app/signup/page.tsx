@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logger from "@/lib/services/logger";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function SignupPage() {
@@ -30,10 +31,10 @@ export default function SignupPage() {
 
     try {
       await signUp(email, password, displayName || undefined);
-      router.push("/inbox");
+      router.push("/");
     } catch (err) {
-      setError("Failed to create account. Email may already be in use.");
-      console.error(err);
+      setError(err instanceof Error ? err.message : "Something went wrong");
+      logger.error(err as string);
     } finally {
       setLoading(false);
     }

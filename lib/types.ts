@@ -4,6 +4,11 @@ export type ItemStatus = "active" | "completed" | "archived" | "deleted";
 
 export type ItemPriority = "low" | "medium" | "high" | "urgent";
 
+export interface FirestoreTimestamp {
+  seconds: number;
+  nanoseconds: number;
+}
+
 export interface ItemSchedule {
   date?: string;
   time?: string;
@@ -28,8 +33,8 @@ export interface Item {
   links?: string[];
   source?: ItemSource;
   metadata?: Record<string, unknown>;
-  createdAt: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  updatedAt: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  createdAt: FirestoreTimestamp;
+  updatedAt: FirestoreTimestamp;
 }
 
 export type EventType = "completion" | "habit_log" | "meal_log" | "focus_session" | "custom";
@@ -40,8 +45,8 @@ export interface Event {
   type: EventType;
   itemId?: string;
   data: Record<string, unknown>;
-  timestamp: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  createdAt: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  timestamp: FirestoreTimestamp;
+  createdAt: FirestoreTimestamp;
 }
 
 export interface CreateItemAction {
@@ -89,8 +94,14 @@ export interface Prompt {
   parsedPlan: ActionPlan;
   createdItemIds: string[];
   status: "pending" | "confirmed" | "rejected";
-  createdAt: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  processedAt?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  createdAt: FirestoreTimestamp;
+  processedAt?: FirestoreTimestamp;
+}
+
+export interface MessageMetadata {
+  actions?: Action[];
+  suggestions?: string[];
+  [key: string]: unknown;
 }
 
 export interface Message {
@@ -98,33 +109,75 @@ export interface Message {
   content: string;
   sender: 'user' | 'assistant' | 'system' | 'ai' | 'drift';
   timestamp: number;
-  metadata?: {
-    actions?: any[]; // eslint-disable-line @typescript-eslint/no-explicit-any
-    suggestions?: string[];
-    [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  };
+  metadata?: MessageMetadata;
 }
 
 export interface User {
   id: string;
+  uid: string;
   name: string;
-  email?: string;
-  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+  picture?: string;
+  isGoogleUser?: boolean;
+  metadata?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  providerData?: any[]; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
+export interface LoginCredentials {
+  email: string;
+  password?: string;
+}
+
+export interface UserPreferences {
+  theme?: string;
+  notifications?: boolean;
+  [key: string]: unknown;
+}
 
 export interface UserProfile {
   id: string;
   email: string;
   displayName?: string;
   name?: string;
-  preferences?: {
-    theme?: string;
-    notifications?: boolean;
-    [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  photoURL?: string;
+  preferences?: UserPreferences;
+  createdAt?: FirestoreTimestamp;
+  updatedAt?: FirestoreTimestamp;
+}
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon?: string;
+  earnedAt: FirestoreTimestamp;
+}
+
+export interface AppSettings {
+  appearance: {
+    theme: 'light' | 'dark' | 'system';
+    accentColor: string;
+    backgroundEffect?: string;
+    backgroundMusic?: string;
+    backgroundMusicVolume?: number;
   };
-  createdAt?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  updatedAt?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  geminiApiKey: string;
+  notifications?: {
+    enabled: boolean;
+    types?: string[];
+  };
+}
+
+export interface UserDocument {
+  uid: string;
+  email: string;
+  name: string;
+  photoURL?: string;
+  createdAt: FirestoreTimestamp;
+  updatedAt: FirestoreTimestamp;
+  onboardingCompleted: boolean;
+  lastActivityDate?: string;
 }
 

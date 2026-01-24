@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logger from "@/lib/services/logger";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function LoginPage() {
@@ -26,7 +27,7 @@ export default function LoginPage() {
       router.push("/inbox");
     } catch (err) {
       setError("Failed to sign in. Please check your credentials.");
-      console.error(err);
+      logger.error(err as string);
     } finally {
       setLoading(false);
     }

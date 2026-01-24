@@ -3,7 +3,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { itemsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 import { Card, CardContent } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { CheckCircle2, Circle, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Item } from "@/lib/types";
@@ -26,7 +28,7 @@ export default function TodayPage() {
       );
       setTodayItems(filtered);
     } catch (error) {
-      console.error("Failed to load items:", error);
+      logger.error("Failed to load items:", error);
     } finally {
       setLoading(false);
     }
@@ -45,14 +47,35 @@ export default function TodayPage() {
       await itemsService.update(user.uid, item.id, { status: newStatus });
       await loadTodayItems();
     } catch (error) {
-      console.error("Failed to update item:", error);
+      logger.error("Failed to update item:", error);
     }
   };
 
   if (loading) {
     return (
       <div className="p-8 max-w-4xl mx-auto">
-        <div className="text-center py-12">Loading...</div>
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-2">
+            <Skeleton className="w-8 h-8 rounded-lg" />
+            <Skeleton className="h-8 w-32" />
+          </div>
+          <Skeleton className="h-5 w-48" />
+        </div>
+        <div className="space-y-3">
+          {[1, 2, 3].map((i) => (
+            <Card key={i}>
+              <CardContent className="py-4">
+                <div className="flex items-start gap-3">
+                  <Skeleton className="h-5 w-5 rounded-full mt-0.5" />
+                  <div className="flex-1">
+                    <Skeleton className="h-5 w-3/4 mb-2" />
+                    <Skeleton className="h-4 w-1/2" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     );
   }

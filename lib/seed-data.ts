@@ -9,6 +9,7 @@
  */
 
 import { Item, Event, Prompt, ItemStatus, ItemPriority } from "./types";
+import { Timestamp } from "firebase/firestore";
 
 export interface SeedData {
   items: Omit<Item, "id" | "userId" | "createdAt" | "updatedAt">[];
@@ -166,13 +167,13 @@ export const generateSeedData = (): SeedData => {
         type: "completion",
         itemId: "todo-1",
         data: { completedAt: new Date().toISOString() },
-        timestamp: new Date(),
+        timestamp: Timestamp.now(),
       },
       {
         type: "habit_log",
         itemId: "habit-1",
         data: { duration: 10, notes: "Felt relaxed" },
-        timestamp: new Date(),
+        timestamp: Timestamp.now(),
       },
     ],
 
@@ -196,7 +197,7 @@ export const generateSeedData = (): SeedData => {
         },
         createdItemIds: ["item-123"],
         status: "confirmed",
-        processedAt: new Date(),
+        processedAt: Timestamp.now(),
       },
       {
         rawPrompt: "Create a goal to learn TypeScript",
@@ -216,7 +217,7 @@ export const generateSeedData = (): SeedData => {
         },
         createdItemIds: ["item-456"],
         status: "confirmed",
-        processedAt: new Date(),
+        processedAt: Timestamp.now(),
       },
     ],
   };

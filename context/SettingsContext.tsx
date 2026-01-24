@@ -2,11 +2,13 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import { settingsService } from '@/lib/firestore';
+import { AppSettings } from "@/lib/types";
+import { settingsService } from "@/lib/firestore";
+import logger from "@/lib/services/logger";
 
 interface SettingsContextType {
-    settings: any;
-    updateSettings: (updates: any) => void;
+    settings: AppSettings;
+    updateSettings: (updates: Partial<AppSettings>) => void;
     updateApiKey: (apiKey: string) => void;
     isMusicMuted: boolean;
     setMusicMuted: (muted: boolean) => void;
@@ -24,7 +26,7 @@ export const useSettings = () => {
 
 export const SettingsProvider = ({ children }: { children: React.ReactNode }) => {
     const { user, isAuthenticated } = useAuth();
-    const [settings, setSettings] = useState({
+    const [settings, setSettings] = useState<AppSettings>({
         appearance: {
             theme: 'system',
             accentColor: 'indigo',
@@ -32,7 +34,6 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
             backgroundMusic: 'none',
             backgroundMusicVolume: 0.5,
         },
-        // Default null to force user to input it or load from storage
         geminiApiKey: '',
     });
     const [, setIsLoaded] = useState(false);
@@ -61,20 +62,19 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
                     }
                 } catch (error) {
                     // Fallback to localStorage
-                    console.error("Failed to load settings from Firestore", error);
+                    logger.error("Failed to load settings from Firestore", error);
                 }
             }
         }
         loadSettings();
     }, [isAuthenticated, user]);
 
-    const updateSettings = (updates: any) => {
+    const updateSettings = (updates: Partial<AppSettings>) => {
         setSettings(prev => {
             const newSettings = { ...prev, ...updates };
             localStorage.setItem('justgoals-settings', JSON.stringify(newSettings));
-            // Sync to firestore if user exists
             if (isAuthenticated && user && user.id) {
-                settingsService.saveAppSettings(user.id, newSettings).catch(console.error);
+                settingsService.saveAppSettings(user.id, newSettings).catch(logger.error);
             }
             return newSettings;
         });
@@ -85,7 +85,7 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
             const updated = { ...prev, geminiApiKey: apiKey };
             localStorage.setItem('justgoals-settings', JSON.stringify(updated));
             if (isAuthenticated && user && user.id) {
-                settingsService.saveAppSettings(user.id, updated).catch(console.error);
+                settingsService.saveAppSettings(user.id, updated).catch(logger.error);
             }
             return updated;
         });

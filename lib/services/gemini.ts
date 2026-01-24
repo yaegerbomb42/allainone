@@ -1,6 +1,8 @@
 // import { GoogleGenerativeAI } from '@google/generative-ai'; // Unused
 
-class GeminiService {
+import logger from './logger';
+
+export class GeminiService {
     private apiKey: string | null = null;
     private modelName: string = 'gemini-1.5-flash';
     private endpoint: string;
@@ -32,7 +34,7 @@ class GeminiService {
     initializeFromSettings(settings: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
         const apiKey = settings?.geminiApiKey;
         if (!apiKey) {
-            // console.warn('No Gemini API key found in settings');
+            logger.warn('No Gemini API key found in settings');
             return false;
         }
 
@@ -139,7 +141,7 @@ class GeminiService {
                 suggestions: suggestions,
             };
         } catch (error: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
-            console.error('Error generating response:', error);
+            logger.error('Error generating response:', error);
             if (error.message.includes('API key')) {
                 throw new Error('Please check your Gemini API key in Settings.');
             }
@@ -193,7 +195,7 @@ Instructions:
 
                     actions.push(actionData);
                 } catch (parseError) {
-                    console.warn('Could not parse action:', parseError);
+                    logger.warn('Could not parse action:', parseError);
                 }
             }
         }

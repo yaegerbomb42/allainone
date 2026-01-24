@@ -15,7 +15,8 @@ import {
   QueryConstraint,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import { Item, Event, Prompt, ItemType, ItemStatus } from "@/lib/types";
+import { Item, Event, Prompt, ItemType, ItemStatus, AppSettings, UserDocument } from "@/lib/types";
+import logger from "@/lib/services/logger";
 
 /**
  * Items CRUD operations
@@ -202,7 +203,6 @@ export async function executeActionPlan(
   }
 
   await batch.commit();
-  await batch.commit();
   return createdItemIds;
 }
 
@@ -210,13 +210,13 @@ export async function executeActionPlan(
  * Settings CRUD operations
  */
 export const settingsService = {
-  async getAppSettings(userId: string): Promise<any> { // eslint-disable-line @typescript-eslint/no-explicit-any
+  async getAppSettings(userId: string): Promise<AppSettings | null> {
     const settingsRef = doc(db, `users/${userId}/settings/general`);
     const snapshot = await getDoc(settingsRef);
-    return snapshot.exists() ? snapshot.data() : {};
+    return snapshot.exists() ? snapshot.data() as AppSettings : null;
   },
 
-  async saveAppSettings(userId: string, settings: any): Promise<void> { // eslint-disable-line @typescript-eslint/no-explicit-any
+  async saveAppSettings(userId: string, settings: Partial<AppSettings>): Promise<void> {
     const settingsRef = doc(db, `users/${userId}/settings/general`);
     await setDoc(settingsRef, settings, { merge: true });
   }
@@ -226,10 +226,10 @@ export const settingsService = {
  * User operations
  */
 export const userService = {
-  async getUserDoc(userId: string): Promise<any> { // eslint-disable-line @typescript-eslint/no-explicit-any
+  async getUserDoc(userId: string): Promise<UserDocument | null> {
     const userRef = doc(db, `users/${userId}`);
     const snapshot = await getDoc(userRef);
-    return snapshot.exists() ? snapshot.data() : null;
+    return snapshot.exists() ? snapshot.data() as UserDocument : null;
   },
 
   async initializeUserData(userId: string, email: string, name?: string): Promise<void> {
@@ -264,7 +264,7 @@ export const userService = {
 
   async robustSyncUserData(userId: string): Promise<void> {
     // Placeholder for advanced sync logic
-    console.log(`Syncing data for ${userId}`);
+    logger.info(`Syncing data for ${userId}`);
   }
 };
 

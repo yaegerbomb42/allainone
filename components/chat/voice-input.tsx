@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Icon from '@/components/ui/icon';
 import { cn } from '@/lib/utils'; // Assuming generic utility exists
+import logger from '@/lib/services/logger';
 
 interface VoiceInputProps {
     onTranscript: (text: string) => void;
@@ -41,7 +42,7 @@ export default function VoiceInput({ onTranscript, disabled }: VoiceInputProps) 
                 };
 
                 recognitionRef.current.onerror = (event: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
-                    console.error('Speech recognition error', event.error);
+                    logger.error('Speech recognition error', event.error);
                     setIsListening(false);
                 };
             }

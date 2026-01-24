@@ -1,0 +1,111 @@
+{
+    "trades": [
+        "HVAC",
+        "Plumbing",
+        "Electrical",
+        "Roofing",
+        "Solar"
+    ],
+    "locations": [
+        {
+            "state": "Texas",
+            "cities": [
+                "Houston",
+                "San Antonio",
+                "Dallas",
+                "Austin",
+                "Fort Worth"
+            ]
+        },
+        {
+            "state": "California",
+            "cities": [
+                "Los Angeles",
+                "San Diego",
+                "San Jose",
+                "San Francisco",
+                "Fresno"
+            ]
+        },
+        {
+            "state": "Florida",
+            "cities": [
+                "Jacksonville",
+                "Miami",
+                "Tampa",
+                "Orlando",
+                "St. Petersburg"
+            ]
+        },
+        {
+            "state": "New York",
+            "cities": [
+                "New York City",
+                "Buffalo",
+                "Rochester",
+                "Yonkers",
+                "Syracuse"
+            ]
+        },
+        {
+            "state": "Illinois",
+            "cities": [
+                "Chicago",
+                "Aurora",
+                "Naperville",
+                "Joliet",
+                "Rockford"
+            ]
+        },
+        {
+            "state": "Pennsylvania",
+            "cities": [
+                "Philadelphia",
+                "Pittsburgh",
+                "Allentown",
+                "Erie",
+                "Reading"
+            ]
+        },
+        {
+            "state": "Ohio",
+            "cities": [
+                "Columbus",
+                "Cleveland",
+                "Cincinnati",
+                "Toledo",
+                "Akron"
+            ]
+        },
+        {
+            "state": "Georgia",
+            "cities": [
+                "Atlanta",
+                "Augusta",
+                "Columbus",
+                "Macon",
+                "Savannah"
+            ]
+        },
+        {
+            "state": "North Carolina",
+            "cities": [
+                "Charlotte",
+                "Raleigh",
+                "Greensboro",
+                "Durham",
+                "Winston-Salem"
+            ]
+        },
+        {
+            "state": "Michigan",
+            "cities": [
+                "Detroit",
+                "Grand Rapids",
+                "Warren",
+                "Sterling Heights",
+                "Ann Arbor"
+            ]
+        }
+    ]
+}
