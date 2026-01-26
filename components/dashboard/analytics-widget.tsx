@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, TrendingUp, Zap, Target } from "lucide-react";
+import { BarChart3, TrendingUp, Zap } from "lucide-react";
 import { ActivityChart } from "@/components/analytics/activity-chart";
 
 export function AnalyticsWidget() {

@@ -2,11 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, ArrowRight, Check, X, RefreshCw } from "lucide-react";
+import { Sparkles, Check, X, RefreshCw } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/auth-context";
-import { useSettings } from "@/context/SettingsContext";
-import { generateAIResponse } from "@/app/actions";
 import { cn } from "@/lib/utils";
 
 interface Suggestion {
@@ -20,7 +18,6 @@ interface Suggestion {
 
 export function SmartSuggestions() {
   const { user } = useAuth();
-  const { settings } = useSettings();
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(true);
 

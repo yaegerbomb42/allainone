@@ -13,6 +13,13 @@ export function JournalWidget() {
   const { user } = useAuth();
   const [latestEntry, setLatestEntry] = useState<Item | null>(null);
   const [loading, setLoading] = useState(true);
+  const formatCreatedAt = (createdAt?: Item["createdAt"] | { toDate: () => Date } | null) => {
+    if (!createdAt) return "Recently";
+    if ("toDate" in createdAt && typeof createdAt.toDate === "function") {
+      return format(createdAt.toDate(), "MMMM d, yyyy");
+    }
+    return format(new Date(createdAt.seconds * 1000), "MMMM d, yyyy");
+  };
 
   useEffect(() => {
     async function fetchJournal() {
@@ -70,11 +77,11 @@ export function JournalWidget() {
             <div className="flex-1 p-4 rounded-xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 border border-blue-500/10 relative overflow-hidden group">
                 <Quote className="absolute -top-2 -right-2 w-16 h-16 text-blue-500/5 group-hover:text-blue-500/10 transition-colors" />
                 <div className="text-[10px] font-bold text-blue-500 uppercase mb-2">
-                    {latestEntry.createdAt ? format((latestEntry.createdAt as any).toDate(), 'MMMM d, yyyy') : 'Recently'}
+                    {formatCreatedAt(latestEntry.createdAt)}
                 </div>
                 <h3 className="font-bold text-base mb-2 line-clamp-1">{latestEntry.title}</h3>
                 <p className="text-sm text-muted-foreground line-clamp-3 italic">
-                    "{latestEntry.body || 'No content...'}"
+                    &ldquo;{latestEntry.body || "No content..."}&rdquo;
                 </p>
             </div>
             <Link 
