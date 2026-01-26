@@ -7,7 +7,6 @@ import { useAuth } from "@/context/AuthContext";
 import { Item } from "@/lib/types";
 import { Target, ChevronRight, Milestone } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export function GoalsWidget() {
   const { user } = useAuth();

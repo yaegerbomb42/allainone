@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { itemsService } from "@/lib/firestore";
 import { useAuth } from "@/context/AuthContext";
 import { Item } from "@/lib/types";
-import { RotateCcw, ChevronRight, CheckCircle2, Circle } from "lucide-react";
+import { RotateCcw, ChevronRight, Circle } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
